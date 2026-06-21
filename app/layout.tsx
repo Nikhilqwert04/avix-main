@@ -111,7 +111,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${interDisplay.variable} h-full bg-neutral-950 text-neutral-50 antialiased`}
+      className={`${interDisplay.variable} h-full bg-black text-neutral-50 antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
