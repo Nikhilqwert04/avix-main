@@ -109,7 +109,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${interDisplay.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${interDisplay.variable} h-full bg-neutral-950 text-neutral-50 antialiased`}
+    >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
