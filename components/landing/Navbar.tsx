@@ -95,7 +95,7 @@ const Navbar = () => {
           </div>
 
           <Link
-            href={"#"}
+            href={"/blog"}
             className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
           >
             Blog

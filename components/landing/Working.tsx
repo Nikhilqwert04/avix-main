@@ -162,7 +162,7 @@ export const AnalyzingContent = () => (
 
 export default function Working() {
   return (
-    <div className="mx-40 mt-10 flex flex-col gap-2 pb-24">
+    <div className="flex w-full flex-col gap-2 pb-24">
       <span className="w-fit rounded-full border border-neutral-800 bg-neutral-900 px-2 py-1 text-sm">
         How it works
       </span>
@@ -177,7 +177,7 @@ export default function Working() {
           <AnalyzingContent />
           <div className="absolute bottom-4 ml-5">
             <h1 className="text-[20px] font-semibold">Analyzing workflow</h1>
-            <p className="text-neutral-500">
+            <p className="max-w-[280px] text-neutral-500">
               We find where AI can save you time and boost efficiency.
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function Working() {
           <AnalyzingContent />
           <div className="absolute bottom-4 ml-5">
             <h1 className="text-[20px] font-semibold">Integrating Solutions</h1>
-            <p className="text-neutral-500">
+            <p className="max-w-[280px] text-neutral-500">
               We connect smart AI tools into your existing systems.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function Working() {
           <AnalyzingContent />
           <div className="absolute bottom-4 ml-5">
             <h1 className="text-[20px] font-semibold">Regular Maintenance</h1>
-            <p className="text-neutral-500">
+            <p className="max-w-[280px] text-neutral-500">
               We keep your AI running smooth and always up to date.
             </p>
           </div>

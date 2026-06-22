@@ -15,8 +15,10 @@ const page = () => {
         </div>
       </div>
 
-      <Hours />
-      <Working />
+      <div className="mx-auto flex w-full max-w-6xl flex-col">
+        <Hours />
+        <Working />
+      </div>
     </div>
   );
 };
