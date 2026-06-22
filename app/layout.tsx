@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/landing/Navbar";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const interDisplay = localFont({
   src: [
@@ -113,7 +115,12 @@ export default function RootLayout({
       lang="en"
       className={`${interDisplay.variable} h-full bg-black text-neutral-50 antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <SmoothScroll>
+          <Navbar />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }

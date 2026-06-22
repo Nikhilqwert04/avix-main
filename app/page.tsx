@@ -5,11 +5,15 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="relative flex h-screen w-screen flex-col items-center">
-      <Navbar />
-      <Landing />
-      <div className="relative">
-        <Footer />
+    <div className="flex h-screen w-screen flex-col">
+      <div className="flex min-h-screen min-w-[93vw] flex-col items-center">
+        <Landing />
+        <div className="relative">
+          <Footer />
+        </div>
+      </div>
+      <div className="flex min-h-screen min-w-screen items-center justify-center text-8xl">
+        Under Work
       </div>
     </div>
   );

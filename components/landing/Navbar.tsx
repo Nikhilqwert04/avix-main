@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   SiStripe,
@@ -19,8 +20,8 @@ const companies = [
 
 const Navbar = () => {
   return (
-    <div className="left-[33 vw] absolute -top-1 z-99 hidden cursor-pointer sm:block">
-      <div className="scale-x-[0.52] transition-transform duration-300 ease-in-out hover:scale-x-[2]">
+    <div className="group absolute -top-1 left-[32vw] z-99 hidden cursor-pointer sm:block">
+      <div className="scale-x-[0.52] transition-transform duration-300 ease-in-out">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="472"
@@ -33,6 +34,39 @@ const Navbar = () => {
           />
         </svg>
       </div>
+      <div className="absolute top-12 left-10 flex gap-5">
+        <Link
+          href={"/"}
+          className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
+        >
+          Home
+          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover/link:w-full" />
+        </Link>
+        <Link
+          href={"#"}
+          className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
+        >
+          About
+          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover/link:w-full" />
+        </Link>
+      </div>
+      <div className="absolute top-12 right-1 flex gap-5">
+        <Link
+          href={"#"}
+          className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
+        >
+          Blogs
+          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover/link:w-full" />
+        </Link>
+        <Link
+          href={"/contact"}
+          className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
+        >
+          Contact
+          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover/link:w-full" />
+        </Link>
+      </div>
+
       <div className="absolute top-10 left-[235]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +93,7 @@ const Navbar = () => {
 
 export const Footer = () => {
   return (
-    <div className="absolute -bottom-1 -left-50 z-99 mt-10 hidden sm:block">
+    <div className="absolute -bottom-1 -left-50 z-99 mt-10 hidden w-fit sm:block">
       <svg
         className="scale-x-[2] scale-y-160 rotate-180"
         xmlns="http://www.w3.org/2000/svg"
