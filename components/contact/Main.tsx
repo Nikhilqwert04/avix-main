@@ -5,7 +5,7 @@ import LowerDiv from "./LowerDiv";
 
 function main() {
   return (
-    <div className="mt-44 flex w-full flex-col items-center overflow-x-hidden">
+    <div className="mt-30 mb-10 flex w-full flex-col items-center overflow-x-hidden">
       <UpperHeading />
       <LowerDiv />
     </div>

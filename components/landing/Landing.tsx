@@ -1,38 +1,112 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { motion } from "framer-motion";
+
+const ease = [0, 0, 0.2, 1] as const;
 
 const Landing = () => {
   return (
-    <div className="relative m-8 flex h-full min-w-[94vw] flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl bg-linear-to-b from-neutral-900 via-black to-neutral-900">
-      <div className="flex items-center gap-1.5 rounded-full border border-neutral-700 bg-neutral-900 pr-2 text-sm">
-        <span className="rounded-full bg-blue-600 px-1 py-0.5 text-white">
-          New
-        </span>{" "}
-        Custom Ai Agents
-      </div>
-      <div className="text-center leading-[70px] font-semibold">
-        <h1 className="text-[80px] tracking-tighter">
-          We Make AI Work for You
-        </h1>
-        <h1 className="text-[80px] tracking-tighter">Not Against You.</h1>
-      </div>
-      <span className="max-w-md text-center text-neutral-500">
-        We design AI systems that save time, cut costs, and make your business
-        run smoother — without the complexity.
-      </span>
-      <div className="flex items-center gap-2">
-        <Link
-          className="rounded-full bg-neutral-100 px-5 py-2 font-semibold text-neutral-950 transition-colors duration-200 ease-in hover:bg-neutral-300"
-          href={"#"}
+    <div className="relative m-5 flex h-[95vh] w-full flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl bg-linear-to-b from-neutral-900 via-black to-neutral-900">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 z-0 h-full w-full object-cover opacity-90"
+      >
+        <source src="/Landing/HeroVideo.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 z-0 bg-black/40" />
+
+      {/* Masking overlay over the video */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "block",
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          overflow: "clip",
+          WebkitMask:
+            "linear-gradient(0deg, rgba(0, 0, 0, 0) 82.14034346846847%, rgba(0, 0, 0, 1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 76.31791948198197%, rgba(0, 0, 0, 1) 100%)",
+          mask: "linear-gradient(0deg, rgba(0, 0, 0, 0) 82.14034346846847%, rgba(0, 0, 0, 1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 76.31791948198197%, rgba(0, 0, 0, 1) 100%)",
+          borderRadius: "0px",
+        }}
+      />
+
+      <div className="relative z-10 m-4 flex h-full w-full flex-col items-center justify-center gap-5">
+        {/* Badge expands from "New" → full text */}
+        <motion.div
+          className="pr flex items-center overflow-hidden rounded-full border border-neutral-700/50 bg-neutral-900 text-sm"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease }}
         >
-          Book a call
-        </Link>
-        <Link
-          className="rounded-full bg-neutral-800 px-4 py-2 font-semibold text-neutral-50"
-          href={"#"}
+          <span className="shrink-0 rounded-full bg-blue-600 px-2 py-1 text-xs font-medium text-white">
+            New
+          </span>
+          <motion.span
+            className="block overflow-hidden font-medium tracking-tighter whitespace-nowrap"
+            initial={{ maxWidth: 0, opacity: 0 }}
+            animate={{
+              maxWidth: 160,
+              opacity: 1,
+              paddingTop: 3,
+              paddingBottom: 3,
+              paddingLeft: 5,
+              paddingRight: 5,
+            }}
+            transition={{ duration: 0.5, ease, delay: 0.7 }}
+          >
+            Custom AI Agents
+          </motion.span>
+        </motion.div>
+
+        <motion.div
+          className="text-center leading-[70px] font-semibold"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease, delay: 0.15 }}
         >
-          View services
-        </Link>
+          <h1 className="text-[70px] tracking-[-0.06em]">
+            We Make AI Work for You
+          </h1>
+          <h1 className="text-[70px] tracking-[-0.06em]">Not Against You.</h1>
+        </motion.div>
+
+        <motion.span
+          className="max-w-lg text-center text-[17px] font-normal text-neutral-400"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease, delay: 0.3 }}
+        >
+          We design AI systems that save time, cut costs, and make your business
+          run smoother — without the complexity.
+        </motion.span>
+
+        <motion.div
+          className="flex items-center gap-2"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease, delay: 0.45 }}
+        >
+          <Link
+            className="rounded-full bg-neutral-100 px-5 py-2 text-[15px] font-semibold text-neutral-950 transition-colors duration-150 ease-in hover:bg-neutral-400"
+            href={"#"}
+          >
+            Book a call
+          </Link>
+          <Link
+            className="rounded-full bg-neutral-800 px-4 py-2 text-[15px] font-semibold text-neutral-50 transition-colors duration-150 ease-in hover:bg-neutral-900"
+            href={"#"}
+          >
+            View services
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
