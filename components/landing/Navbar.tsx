@@ -121,7 +121,7 @@ export const Footer = () => {
               {companies.map(({ name, icon: Icon }) => (
                 <div
                   key={name}
-                  className="flex items-center gap-2 text-neutral-400"
+                  className="flex items-center gap-2 text-neutral-100"
                 >
                   <Icon size={18} />
                   <span className="text-base font-medium tracking-wide">

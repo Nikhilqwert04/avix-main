@@ -6,7 +6,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="flex h-screen w-screen flex-col">
-      <div className="flex min-h-screen flex-col items-center px-4">
+      <div className="flex min-h-screen flex-col items-center px-6">
         <Landing />
         <div className="relative">
           <Footer />
