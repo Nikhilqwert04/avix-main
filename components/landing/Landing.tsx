@@ -7,7 +7,7 @@ const ease = [0, 0, 0.2, 1] as const;
 
 const Landing = () => {
   return (
-    <div className="relative m-5 flex h-full w-full flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl bg-linear-to-b from-neutral-900 via-black to-neutral-900">
+    <div className="relative m-5 flex h-[95vh] w-full flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl bg-linear-to-b from-neutral-900 via-black to-neutral-900">
       {/* Background Video */}
       <video
         autoPlay
@@ -72,10 +72,10 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.15 }}
         >
-          <h1 className="text-[70px] -tracking-[0.06em]">
+          <h1 className="text-[70px] tracking-[-0.06em]">
             We Make AI Work for You
           </h1>
-          <h1 className="text-[70px] -tracking-[0.06em]">Not Against You.</h1>
+          <h1 className="text-[70px] tracking-[-0.06em]">Not Against You.</h1>
         </motion.div>
 
         <motion.span
@@ -95,13 +95,13 @@ const Landing = () => {
           transition={{ duration: 0.6, ease, delay: 0.45 }}
         >
           <Link
-            className="rounded-full bg-neutral-100 px-5 py-2 text-[15px] font-semibold text-neutral-950 transition-colors duration-200 ease-in hover:bg-neutral-400"
+            className="rounded-full bg-neutral-100 px-5 py-2 text-[15px] font-semibold text-neutral-950 transition-colors duration-150 ease-in hover:bg-neutral-400"
             href={"#"}
           >
             Book a call
           </Link>
           <Link
-            className="rounded-full bg-neutral-800 px-4 py-2 text-[15px] font-semibold text-neutral-50 transition-colors duration-200 ease-in hover:bg-neutral-900"
+            className="rounded-full bg-neutral-800 px-4 py-2 text-[15px] font-semibold text-neutral-50 transition-colors duration-150 ease-in hover:bg-neutral-900"
             href={"#"}
           >
             View services
