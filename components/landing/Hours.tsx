@@ -2,7 +2,7 @@ import React from "react";
 
 const Hours = () => {
   return (
-    <div className="mt-5 flex h-screen w-screen scale-100 justify-center text-2xl">
+    <div className="mt-5 flex h-[50vh] w-screen scale-100 justify-center text-2xl">
       <svg
         className="absolute w-full overflow-hidden"
         viewBox="0 0 1400 440"
