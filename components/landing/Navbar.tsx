@@ -20,7 +20,7 @@ const companies = [
 
 const Navbar = () => {
   return (
-    <div className="group absolute -top-1 left-[32vw] z-99 hidden cursor-pointer sm:block">
+    <div className="group absolute -top-5 left-[32vw] z-99 hidden cursor-pointer sm:block">
       <div className="scale-x-[0.52] transition-transform duration-300 ease-in-out">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ const Navbar = () => {
 
 export const Footer = () => {
   return (
-    <div className="absolute -bottom-1 -left-50 z-99 mt-10 hidden w-fit sm:block">
+    <div className="absolute -bottom-6 -left-50 z-99 mt-10 hidden w-fit sm:block">
       <svg
         className="scale-x-[2] scale-y-160 rotate-180"
         xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ const ease = [0, 0, 0.2, 1] as const;
 
 const Landing = () => {
   return (
-    <div className="relative m-8 flex h-full min-w-[94vw] flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl bg-linear-to-b from-neutral-900 via-black to-neutral-900">
+    <div className="relative m-4 flex h-full w-full flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl bg-linear-to-b from-neutral-900 via-black to-neutral-900">
       {/* Badge expands from "New" → full text */}
       <motion.div
         className="pr flex items-center overflow-hidden rounded-full border border-neutral-700 bg-neutral-900 text-sm"
@@ -46,7 +46,7 @@ const Landing = () => {
       </motion.div>
 
       <motion.span
-        className="max-w-md text-center text-neutral-500"
+        className="max-w-md text-center text-[17px] font-normal text-neutral-100"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease, delay: 0.3 }}
@@ -62,7 +62,7 @@ const Landing = () => {
         transition={{ duration: 0.6, ease, delay: 0.45 }}
       >
         <Link
-          className="rounded-full bg-neutral-100 px-5 py-2 font-semibold text-neutral-950 transition-colors duration-200 ease-in hover:bg-neutral-400"
+          className="rounded-full bg-neutral-100 px-5 py-2 text-[18px] font-semibold text-neutral-950 transition-colors duration-200 ease-in hover:bg-neutral-400"
           href={"#"}
         >
           Book a call

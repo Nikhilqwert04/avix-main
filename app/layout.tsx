@@ -115,7 +115,7 @@ export default function RootLayout({
       lang="en"
       className={`${interDisplay.variable} h-full bg-black text-neutral-50 antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col overflow-hidden">
         <SmoothScroll>
           <Navbar />
           {children}
