@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import { BiCalendar } from "react-icons/bi";
 import { BsClock } from "react-icons/bs";
 import Glow from "@/components/Glow";
+import { GrGithub } from "react-icons/gr";
+import { CgVercel } from "react-icons/cg";
+import {
+  SiFigma,
+  SiFramer,
+  SiNotion,
+  SiZoom,
+  SiSlack,
+  SiGooglemeet,
+} from "react-icons/si";
 
 export const StepCount = ({ step }: { step: string }) => {
   return (
@@ -40,7 +50,7 @@ export const StepCount = ({ step }: { step: string }) => {
 };
 
 export const AnalyzingContent = () => (
-  <div className="absolute m-4 w-[90%] rounded-xl bg-linear-to-b from-white/30 to-transparent mask-b-from-0 p-px">
+  <div className="absolute m-4 w-[90%] rounded-xl bg-linear-to-b from-white/40 to-transparent mask-b-from-30 p-px">
     <div className="rounded-[11px] bg-neutral-900 p-4">
       <span className="t font-medium">Analyzing Workflow</span>
       <p className="text-[12px] text-neutral-300">
@@ -160,6 +170,86 @@ export const AnalyzingContent = () => (
   </div>
 );
 
+type IntegrationCategoryProps = {
+  heading: string;
+  description: string;
+  icons: React.ReactNode[];
+};
+
+export const IntegrationCategory = ({
+  heading,
+  description,
+  icons,
+}: IntegrationCategoryProps) => (
+  <div className="flex flex-col gap-1">
+    <div>
+      <h1 className="text-sm">{heading}</h1>
+      <p className="text-[10px]">{description}</p>
+    </div>
+    <div className="flex gap-2">
+      <div className="flex items-center gap-2">
+        {icons.map((icon, i) => (
+          <span key={i}>{icon}</span>
+        ))}
+      </div>
+      <span className="ml-2 border border-neutral-700 bg-neutral-900 px-1 text-[12px]">
+        +Request more
+      </span>
+    </div>
+  </div>
+);
+
+const integrationCategories: IntegrationCategoryProps[] = [
+  {
+    heading: "Project Management",
+    description: "Sync tasks and updates with project management tools:",
+    icons: [
+      <GrGithub key="github" color="#ffffff" />,
+      <CgVercel key="vercel" color="#ffffff" />,
+      <SiNotion key="notion" color="#ffffff" />,
+    ],
+  },
+  {
+    heading: "Design Tools",
+    description: "Bring your design workflows and assets into one place:",
+    icons: [
+      <SiFigma key="figma" color="#F24E1E" />,
+      <SiFramer key="framer" color="#0055FF" />,
+    ],
+  },
+  {
+    heading: "Communication",
+    description: "Connect your team messaging and collaboration apps:",
+    icons: [
+      <SiZoom key="zoom" color="#2D8CFF" />,
+      <SiSlack key="slack" color="#4A154B" />,
+      <SiGooglemeet key="googlemeet" color="#1EA362" />,
+    ],
+  },
+];
+
+export const Integration = () => (
+  <div className="absolute m-4 w-[90%] rounded-xl bg-linear-to-b from-white/30 to-transparent mask-b-from-30 p-px">
+    <div className="rounded-[11px] bg-neutral-900 p-4">
+      <span className="t font-medium">Integrations</span>
+      <p className="text-[12px] text-neutral-300">
+        Seamlessly integrates with your tools
+      </p>
+
+      <hr className="my-4 text-neutral-500" />
+
+      <div className="flex h-full w-full flex-col gap-3">
+        {integrationCategories.map((cat, i) => (
+          <>
+            <IntegrationCategory key={i} {...cat} />
+            <hr className="text-neutral-700" />
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
 export default function Working() {
   return (
     <div className="flex w-full flex-col gap-2 pb-24">
@@ -182,10 +272,11 @@ export default function Working() {
             </p>
           </div>
         </div>
+
         <div className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]">
           <Glow className="top-3 left-11" width="80%" height="20%" />
           <StepCount step="Step 2." />
-          <AnalyzingContent />
+          <Integration />
           <div className="absolute bottom-4 ml-5">
             <h1 className="text-[20px] font-semibold">Integrating Solutions</h1>
             <p className="max-w-[280px] text-neutral-500">
@@ -193,6 +284,7 @@ export default function Working() {
             </p>
           </div>
         </div>
+
         <div className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]">
           <Glow className="top-3 left-11" width="80%" height="20%" />
           <StepCount step="Step 3." />
