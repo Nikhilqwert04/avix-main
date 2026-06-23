@@ -22,6 +22,7 @@ import {
   SiLinear,
   SiGoogleanalytics,
 } from "react-icons/si";
+import InfoPill from "../ui/InfoPill";
 
 export const StepCount = ({ step }: { step: string }) => {
   return (
@@ -304,9 +305,7 @@ export default function Working() {
 
   return (
     <div className="flex w-full flex-col gap-2 pb-24">
-      <span className="w-fit rounded-full border border-neutral-800 bg-neutral-900 px-2 py-1 text-sm">
-        How it works
-      </span>
+      <InfoPill title="How it works" />
       <h1 className="max-w-md text-[46px] leading-[1.2] font-semibold tracking-tighter">
         How we help you get real results with AI
       </h1>
@@ -341,7 +340,7 @@ export default function Working() {
             variants={cardVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]"
+            className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404]"
           >
             <Glow className="top-3 left-11" width="80%" height="20%" />
             <StepCount step={card.step} />

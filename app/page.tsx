@@ -1,6 +1,7 @@
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
 import Navbar, { Footer } from "@/components/landing/Navbar";
+import Solution from "@/components/landing/Solution";
 import Working from "@/components/landing/Working";
 import Link from "next/link";
 import React from "react";
@@ -18,6 +19,7 @@ const page = () => {
       <div className="mx-auto flex w-full max-w-6xl flex-col">
         <Hours />
         <Working />
+        <Solution />
       </div>
     </div>
   );

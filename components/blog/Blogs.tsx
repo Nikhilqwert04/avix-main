@@ -33,7 +33,7 @@ const blogsData = [
 
 const Blogs = () => {
   return (
-    <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-2">
+    <div className="mx-auto grid h-fit w-full max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-2">
       {blogsData.map((blog, index) => (
         <div
           key={index}
