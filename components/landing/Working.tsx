@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { BiCalendar } from "react-icons/bi";
 import { BsClock } from "react-icons/bs";
 import Glow from "@/components/Glow";
+import { useRef } from "react";
 import { GrGithub } from "react-icons/gr";
 import { CgVercel } from "react-icons/cg";
 import {
@@ -13,6 +14,13 @@ import {
   SiZoom,
   SiSlack,
   SiGooglemeet,
+  SiJira,
+  SiTrello,
+  SiAsana,
+  SiGoogledrive,
+  SiDropbox,
+  SiLinear,
+  SiGoogleanalytics,
 } from "react-icons/si";
 
 export const StepCount = ({ step }: { step: string }) => {
@@ -226,6 +234,29 @@ const integrationCategories: IntegrationCategoryProps[] = [
       <SiGooglemeet key="googlemeet" color="#1EA362" />,
     ],
   },
+  {
+    heading: "Task Tracking",
+    description: "Keep every sprint and task in sync across your team:",
+    icons: [
+      <SiJira key="jira" color="#0052CC" />,
+      <SiTrello key="trello" color="#0052CC" />,
+      <SiAsana key="asana" color="#F06A6A" />,
+      <SiLinear key="linear" color="#5E6AD2" />,
+    ],
+  },
+  {
+    heading: "Cloud Storage",
+    description: "Access and share files seamlessly across platforms:",
+    icons: [
+      <SiGoogledrive key="drive" color="#4285F4" />,
+      <SiDropbox key="dropbox" color="#0061FF" />,
+    ],
+  },
+  {
+    heading: "Analytics",
+    description: "Track performance and user behaviour in real time:",
+    icons: [<SiGoogleanalytics key="ga" color="#E37400" />],
+  },
 ];
 
 export const Integration = () => (
@@ -238,19 +269,39 @@ export const Integration = () => (
 
       <hr className="my-4 text-neutral-500" />
 
-      <div className="flex h-full w-full flex-col gap-3">
-        {integrationCategories.map((cat, i) => (
-          <>
-            <IntegrationCategory key={i} {...cat} />
-            <hr className="text-neutral-700" />
-          </>
-        ))}
+      <div className="overflow-hidden" style={{ height: "210px" }}>
+        <motion.div
+          className="flex flex-col gap-3"
+          animate={{ y: ["0%", "-50%"] }}
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+        >
+          {[...integrationCategories, ...integrationCategories].map(
+            (cat, i) => (
+              <div key={i}>
+                <IntegrationCategory {...cat} />
+                <hr className="mt-3 text-neutral-700" />
+              </div>
+            )
+          )}
+        </motion.div>
       </div>
     </div>
   </div>
 );
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 48 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.2, ease: "easeOut" as const, delay: i * 0.3 },
+  }),
+};
+
 export default function Working() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
     <div className="flex w-full flex-col gap-2 pb-24">
       <span className="w-fit rounded-full border border-neutral-800 bg-neutral-900 px-2 py-1 text-sm">
@@ -260,42 +311,47 @@ export default function Working() {
         How we help you get real results with AI
       </h1>
 
-      <div className="mt-5 grid h-[458.5px] w-full grid-cols-3 gap-[20px]">
-        <div className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]">
-          <Glow className="top-3 left-11" width="80%" height="20%" />
-          <StepCount step="Step 1." />
-          <AnalyzingContent />
-          <div className="absolute bottom-4 ml-5">
-            <h1 className="text-[20px] font-semibold">Analyzing workflow</h1>
-            <p className="max-w-[280px] text-neutral-500">
-              We find where AI can save you time and boost efficiency.
-            </p>
-          </div>
-        </div>
-
-        <div className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]">
-          <Glow className="top-3 left-11" width="80%" height="20%" />
-          <StepCount step="Step 2." />
-          <Integration />
-          <div className="absolute bottom-4 ml-5">
-            <h1 className="text-[20px] font-semibold">Integrating Solutions</h1>
-            <p className="max-w-[280px] text-neutral-500">
-              We connect smart AI tools into your existing systems.
-            </p>
-          </div>
-        </div>
-
-        <div className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]">
-          <Glow className="top-3 left-11" width="80%" height="20%" />
-          <StepCount step="Step 3." />
-          <AnalyzingContent />
-          <div className="absolute bottom-4 ml-5">
-            <h1 className="text-[20px] font-semibold">Regular Maintenance</h1>
-            <p className="max-w-[280px] text-neutral-500">
-              We keep your AI running smooth and always up to date.
-            </p>
-          </div>
-        </div>
+      <div
+        ref={ref}
+        className="mt-5 grid h-[458.5px] w-full grid-cols-3 gap-[20px]"
+      >
+        {[
+          {
+            step: "Step 1.",
+            content: <AnalyzingContent />,
+            title: "Analyzing workflow",
+            desc: "We find where AI can save you time and boost efficiency.",
+          },
+          {
+            step: "Step 2.",
+            content: <Integration />,
+            title: "Integrating Solutions",
+            desc: "We connect smart AI tools into your existing systems.",
+          },
+          {
+            step: "Step 3.",
+            content: <AnalyzingContent />,
+            title: "Regular Maintenance",
+            desc: "We keep your AI running smooth and always up to date.",
+          },
+        ].map((card, i) => (
+          <motion.div
+            key={i}
+            custom={i}
+            variants={cardVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#0F0F0F]"
+          >
+            <Glow className="top-3 left-11" width="80%" height="20%" />
+            <StepCount step={card.step} />
+            {card.content}
+            <div className="absolute bottom-4 ml-5">
+              <h1 className="text-[20px] font-semibold">{card.title}</h1>
+              <p className="max-w-[280px] text-neutral-500">{card.desc}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
