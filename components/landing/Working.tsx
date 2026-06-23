@@ -7,6 +7,7 @@ import Glow from "@/components/Glow";
 import { useRef } from "react";
 import { GrGithub } from "react-icons/gr";
 import { CgVercel } from "react-icons/cg";
+import * as Icons from "lucide-react";
 import {
   SiFigma,
   SiFramer,
@@ -290,6 +291,160 @@ export const Integration = () => (
   </div>
 );
 
+export const AnalyzingContent2 = () => (
+  <div className="absolute m-4 w-[90%] rounded-xl bg-linear-to-b from-white/30 to-transparent mask-b-from-0 p-px">
+    <div className="rounded-[11px] bg-neutral-900 p-4">
+      <span className="font-medium">Updates</span>
+      <p className="text-[12px] text-neutral-300">
+        keep functions runs smoothly
+      </p>
+
+      <hr className="my-2 text-neutral-500" />
+
+      <div className="flex h-full w-full flex-col gap-3">
+        <div className="flex h-fit w-full items-center gap-2">
+          <div className="flex w-full items-center justify-between">
+            <div className="flex gap-2 text-[10px]">
+              <div className="flex items-center justify-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-green-600"
+                />
+                <p>New</p>
+              </div>
+              <div className="flex items-center justify-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-blue-600"
+                />
+                <p>Improved</p>
+              </div>
+              <div className="flex items-center justify-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-orange-500"
+                />
+                <p>Fixed</p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="flex gap-2">
+                <Icons.MoveLeft
+                  size={16}
+                  strokeWidth={3}
+                  className="rounded-sm bg-[#232323] p-1"
+                />
+                <Icons.MoveRight
+                  size={16}
+                  strokeWidth={3}
+                  className="rounded-sm bg-[#232323] p-1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex h-full w-full flex-col justify-center">
+          <div className="flex flex-col pt-2 leading-4">
+            <p className="font-semibold !text-white">Sep 2025 update</p>
+            <p className="text-[12px]">List of updates we made in Sep</p>
+            <hr className="my-2 text-neutral-500" />
+          </div>
+          <div className="flex flex-col gap-2 leading-1">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-green-600"
+                />
+                <p className="text-[13px]">Added email automation</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-orange-500"
+                />
+                <p className="text-[13px]">supports larger datasets</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-blue-600"
+                />
+                <p className="text-[13px]">UI bugs on mobile dashboard</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-green-600"
+                />
+                <p className="text-[13px]">Quick start onboarding</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-orange-500"
+                />
+                <p className="text-[13px]">Response time on AI chat </p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-blue-600"
+                />
+                <p className="text-[13px]">
+                  Stripe integration for automated billing
+                </p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const cardVariants = {
   hidden: { opacity: 0, y: 48 },
   visible: (i: number) => ({
@@ -329,7 +484,7 @@ export default function Working() {
           },
           {
             step: "Step 3.",
-            content: <AnalyzingContent />,
+            content: <AnalyzingContent2 />,
             title: "Regular Maintenance",
             desc: "We keep your AI running smooth and always up to date.",
           },
