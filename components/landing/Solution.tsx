@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import InfoPill from "../ui/InfoPill";
 import Glow from "../Glow";
 import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
@@ -11,9 +12,6 @@ import {
   BsGlobe,
   BsTelephone,
   BsSearch,
-  BsEnvelope,
-  BsChatDots,
-  BsTelephoneOutbound,
   BsChevronUp,
 } from "react-icons/bs";
 import { PiPhoneBold } from "react-icons/pi";
@@ -31,7 +29,13 @@ const DashedConnector = () => (
 );
 
 export const FirstCard = () => (
-  <div className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-[20px]">
+  <motion.div
+    className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-[20px]"
+    initial={{ x: -48, y: -32, opacity: 0 }}
+    whileInView={{ x: 0, y: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0 }}
+  >
     <p className="text-lg font-medium tracking-tighter text-neutral-400">
       <span className="font-semibold text-white">Workflow Automation.</span>{" "}
       Automate repetitive tasks and efficiently streamline your daily
@@ -40,7 +44,7 @@ export const FirstCard = () => (
 
     <Glow className="top-20 left-11" width="80%" height="20%" opacity={0.1} />
     <AnalyzingContent />
-  </div>
+  </motion.div>
 );
 
 export const AnalyzingContent = () => (
@@ -196,7 +200,13 @@ const WaveformBars = () => (
 );
 
 export const SecondCard = () => (
-  <div className="relative row-span-2 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-4">
+  <motion.div
+    className="relative row-span-2 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-4"
+    initial={{ y: -48, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.08 }}
+  >
     <div className="mx-auto flex h-[180] w-[80%] items-center justify-center overflow-hidden">
       <WaveformBars />
       <div className="absolute z-10 flex h-60 items-center justify-center">
@@ -215,7 +225,7 @@ export const SecondCard = () => (
       <span className="font-semibold text-white">Voice Agents.</span> Let AI
       handle calls, inquiries, and follow-ups naturally and reliably every day.
     </p>
-  </div>
+  </motion.div>
 );
 
 const expenseCategories = [
@@ -232,7 +242,13 @@ const expenseCategories = [
 ];
 
 export const ThirdCard = () => (
-  <div className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404]">
+  <motion.div
+    className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404]"
+    initial={{ x: 48, y: -32, opacity: 0 }}
+    whileInView={{ x: 0, y: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.16 }}
+  >
     <Glow className="-top-4 -left-7" width="20%" height="20%" opacity={0.3} />
 
     <div className="mt-10 ml-auto flex h-[calc(70%)] w-[90%] flex-col overflow-hidden rounded-tl-2xl border border-r-0 border-neutral-500 mask-b-from-40 px-4 pt-4">
@@ -328,7 +344,7 @@ export const ThirdCard = () => (
       complex data into clear, simple & easy practical insights you can easily
       act on.
     </p>
-  </div>
+  </motion.div>
 );
 
 export const ProfileCard = ({
@@ -485,7 +501,13 @@ const MarqueeRow = ({
 };
 
 export const FourthCard = () => (
-  <div className="relative row-span-2 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-5">
+  <motion.div
+    className="relative row-span-2 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-5"
+    initial={{ x: -48, y: 32, opacity: 0 }}
+    whileInView={{ x: 0, y: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0 }}
+  >
     <Glow className="-top-4 -left-7" width="20%" height="20%" opacity={0.3} />
 
     <div className="flex flex-col gap-3 overflow-hidden mask-r-from-40 mask-l-from-40">
@@ -499,7 +521,7 @@ export const FourthCard = () => (
       advanced AI systems that think and act intelligently for your business
       needs.
     </p>
-  </div>
+  </motion.div>
 );
 
 const Toggle = ({ on }: { on: boolean }) => (
@@ -622,8 +644,162 @@ const outreachMethods: {
   },
 ];
 
+const chatMessages = [
+  "Custom chat bots",
+  "Book an appointment",
+  "What are your hours?",
+  "Track my order",
+  "Get a quote",
+];
+
+export const SixthCard = () => {
+  const [msgIndex, setMsgIndex] = React.useState(0);
+  const [displayed, setDisplayed] = React.useState("");
+  const [phase, setPhase] = React.useState<"typing" | "hold" | "clearing">(
+    "typing"
+  );
+
+  React.useEffect(() => {
+    const target = chatMessages[msgIndex];
+
+    if (phase === "typing") {
+      if (displayed.length < target.length) {
+        const t = setTimeout(
+          () => setDisplayed(target.slice(0, displayed.length + 1)),
+          48
+        );
+        return () => clearTimeout(t);
+      } else {
+        const t = setTimeout(() => setPhase("hold"), 1200);
+        return () => clearTimeout(t);
+      }
+    }
+
+    if (phase === "hold") {
+      const t = setTimeout(() => setPhase("clearing"), 400);
+      return () => clearTimeout(t);
+    }
+
+    if (phase === "clearing") {
+      if (displayed.length > 0) {
+        const t = setTimeout(() => setDisplayed((d) => d.slice(0, -1)), 28);
+        return () => clearTimeout(t);
+      } else {
+        const t = setTimeout(() => {
+          setMsgIndex((i) => (i + 1) % chatMessages.length);
+          setPhase("typing");
+        }, 0);
+        return () => clearTimeout(t);
+      }
+    }
+  }, [phase, displayed, msgIndex]);
+
+  return (
+    <motion.div
+      className="relative row-span-2 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-5"
+      initial={{ x: 48, y: 32, opacity: 0 }}
+      whileInView={{ x: 0, y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.65,
+        ease: [0.25, 0.46, 0.45, 0.94],
+        delay: 0.16,
+      }}
+    >
+      <Glow className="-top-4 left-4" width="60%" height="20%" opacity={0.2} />
+
+      {/* Chat visual */}
+      <div className="mt-4 flex flex-col gap-4 px-2 pt-2">
+        {/* Agent label */}
+        <div className="flex items-center gap-2">
+          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-700">
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+            </svg>
+          </div>
+          <span className="text-xs text-neutral-500">Calista</span>
+        </div>
+
+        {/* Input / message bubble */}
+        <div className="flex items-center gap-3 rounded-xl border border-neutral-600 bg-neutral-800/60 px-4 py-3 shadow-lg">
+          <span className="min-h-[20px] flex-1 text-sm text-white">
+            {displayed}
+            <motion.span
+              className="inline-block h-4 w-[2px] translate-y-[2px] bg-white"
+              animate={{ opacity: [1, 1, 0, 0] }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                ease: "linear",
+                times: [0, 0.5, 0.5, 1],
+              }}
+            />
+          </span>
+          <motion.div
+            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white"
+            animate={{ scale: phase === "hold" ? [1, 0.88, 1] : 1 }}
+            transition={{ duration: 0.25 }}
+          >
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </motion.div>
+        </div>
+
+        {/* Customer label */}
+        <div className="flex items-center justify-end gap-2">
+          <span className="text-xs text-neutral-500">Customer</span>
+          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-700">
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <p className="mt-8 text-lg font-medium tracking-tighter text-neutral-400">
+        <span className="font-semibold text-white">Custom Chatbots.</span>{" "}
+        Provide instant, accurate responses to customers anytime with
+        intelligent AI.
+      </p>
+    </motion.div>
+  );
+};
+
 export const FifthCard = () => (
-  <div className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-[20px]">
+  <motion.div
+    className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-[20px]"
+    initial={{ y: 48, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.08 }}
+  >
     <p className="text-lg font-medium tracking-tighter text-neutral-400">
       <span className="font-semibold text-white">AI Outreach.</span> Automate
       multi-channel outreach and turn cold leads into paying customers.
@@ -735,7 +911,7 @@ export const FifthCard = () => (
         </div>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 const Solution = () => {
@@ -752,7 +928,7 @@ const Solution = () => {
         <ThirdCard />
         <FifthCard />
         <FourthCard />
-        <div className="relative row-span-2 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404]"></div>
+        <SixthCard />
       </div>
     </div>
   );
