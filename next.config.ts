@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  allowedDevOrigins: ["tries-perform-contrast-atom.trycloudflare.com"],
 };
 
 export default nextConfig;
