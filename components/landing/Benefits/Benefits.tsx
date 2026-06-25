@@ -2,13 +2,12 @@
 import InfoPill from "@/components/ui/InfoPill";
 import MainHeading from "@/components/ui/MainHeading";
 import {
-  Hourglass,
-  FastForward,
-  CircleDollarSign,
-  Lightbulb,
-  Crosshair,
-  BarChart2,
-} from "lucide-react";
+  FaHourglass,
+  FaLightbulb,
+  FaCrosshairs,
+  FaChartBar,
+} from "react-icons/fa";
+import { MdFastForward, MdMonetizationOn } from "react-icons/md";
 import { motion } from "framer-motion";
 
 const ease = [0.25, 0.46, 0.45, 0.94] as [number, number, number, number];
@@ -72,11 +71,11 @@ const Benefits = () => {
       <div className="mt-10 grid h-[370px] grid-cols-5 grid-rows-[60px_1fr_1fr] gap-2">
         {/* col-1 row-3: Time Saving — from left */}
         <motion.div
-          className="col-start-1 row-start-3 rounded-2xl border border-neutral-900 bg-neutral-950"
+          className="col-start-1 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
           {...fromLeft(0)}
         >
           <CardContent
-            icon={<Hourglass size={16} />}
+            icon={<FaHourglass size={14} />}
             title="Time saving."
             description="Automate tasks instantly."
           />
@@ -84,11 +83,11 @@ const Benefits = () => {
 
         {/* col-2 row-3: Faster Workflows — from left */}
         <motion.div
-          className="col-start-2 row-start-3 rounded-2xl border border-neutral-900 bg-neutral-950"
+          className="col-start-2 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
           {...fromLeft(0.1)}
         >
           <CardContent
-            icon={<FastForward size={16} />}
+            icon={<MdFastForward size={16} />}
             title="Faster Workflows."
             description="Speed up your operations."
           />
@@ -96,11 +95,11 @@ const Benefits = () => {
 
         {/* col-2 row-2: Cost Efficient — from left */}
         <motion.div
-          className="col-start-2 row-start-2 rounded-2xl border border-neutral-900 bg-neutral-950"
+          className="col-start-2 row-start-2 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
           {...fromLeft(0.05)}
         >
           <CardContent
-            icon={<CircleDollarSign size={16} />}
+            icon={<MdMonetizationOn size={16} />}
             title="Cost Efficient."
             description="Reduce manual workload."
           />
@@ -108,7 +107,7 @@ const Benefits = () => {
 
         {/* col-3 rows-1-4: Center logo card — from bottom */}
         <motion.div
-          className="relative col-start-3 row-start-1 row-end-4 flex justify-center rounded-2xl border border-neutral-700 bg-neutral-950 mask-b-from-30 pt-10"
+          className="relative col-start-3 row-start-1 row-end-4 flex justify-center rounded-2xl border border-neutral-700 bg-linear-to-tr from-black via-black/80 to-neutral-700 mask-b-from-30 pt-10"
           {...fromBottom(0)}
         >
           <div
@@ -142,11 +141,11 @@ const Benefits = () => {
 
         {/* col-4 row-2: Better Insights — from right */}
         <motion.div
-          className="col-start-4 row-start-2 rounded-2xl border border-neutral-900 bg-neutral-950"
+          className="col-start-4 row-start-2 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
           {...fromRight(0.05)}
         >
           <CardContent
-            icon={<Lightbulb size={16} />}
+            icon={<FaLightbulb size={14} />}
             title="Better Insights."
             description="Understand data quickly."
           />
@@ -154,11 +153,11 @@ const Benefits = () => {
 
         {/* col-4 row-3: Higher Accuracy — from right */}
         <motion.div
-          className="col-start-4 row-start-3 rounded-2xl border border-neutral-900 bg-neutral-950"
+          className="col-start-4 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
           {...fromRight(0.1)}
         >
           <CardContent
-            icon={<Crosshair size={16} />}
+            icon={<FaCrosshairs size={14} />}
             title="Higher Accuracy."
             description="Minimize human errors."
           />
@@ -166,11 +165,11 @@ const Benefits = () => {
 
         {/* col-5 row-3: Easy Scaling — from right */}
         <motion.div
-          className="col-start-5 row-start-3 rounded-2xl border border-neutral-900 bg-neutral-950"
+          className="col-start-5 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
           {...fromRight(0)}
         >
           <CardContent
-            icon={<BarChart2 size={16} />}
+            icon={<FaChartBar size={14} />}
             title="Easy Scaling."
             description="Grow without extra effort."
           />
