@@ -3,6 +3,7 @@ import CaseStudy from "@/components/landing/CaseStudy";
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
 import Navbar, { Footer } from "@/components/landing/Navbar";
+import Pricing from "@/components/landing/Pricing";
 import Solution from "@/components/landing/Solution";
 import Testemonials from "@/components/landing/Testemonials";
 import Working from "@/components/landing/Working";
@@ -26,6 +27,7 @@ const page = () => {
         <CaseStudy />
         <Benefits />
         <Testemonials />
+        <Pricing />
       </div>
     </div>
   );
