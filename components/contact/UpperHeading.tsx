@@ -8,7 +8,7 @@ const UpperHeading = () => {
         <div className="w-fit rounded-full bg-[#0055ff] px-3 py-1 text-xs text-white">
           Content
         </div>
-        <div className="text-4xl font-semibold text-white md:text-6xl lg:text-7xl">
+        <div className="text-4xl font-semibold tracking-tighter text-white md:text-6xl lg:text-7xl">
           Have a Project in<br></br> Mind? Let&apos;s Talk
         </div>
       </div>
