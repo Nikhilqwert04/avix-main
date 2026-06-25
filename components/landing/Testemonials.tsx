@@ -1,6 +1,18 @@
+"use client";
+import { useRef } from "react";
 import { Star } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 import InfoPill from "../ui/InfoPill";
 import MainHeading from "../ui/MainHeading";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 48 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.2, ease: "easeOut" as const, delay: i * 0.3 },
+  }),
+};
 
 type TestimonialCardProps = {
   name: string;
@@ -11,7 +23,7 @@ type TestimonialCardProps = {
 
 function TestimonialCard({ name, role, quote, image }: TestimonialCardProps) {
   return (
-    <div className="relative overflow-hidden rounded-2xl">
+    <div className="relative h-full overflow-hidden rounded-2xl">
       <div className="flex h-112.5 flex-col justify-between p-2">
         <div className="flex items-center justify-between p-2">
           <div>
@@ -61,17 +73,29 @@ const testimonials: TestimonialCardProps[] = [
 ];
 
 export default function Testemonials() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
     <div className="flex flex-col gap-2">
       <InfoPill title="Testimonial" />
       <div>
-        <MainHeading title="Clients Who’ve " className="text-start" />
+        <MainHeading title="Clients Who've " className="text-start" />
         <MainHeading title="Seen the Difference" className="text-start" />
       </div>
 
-      <div className="my-10 grid h-112.5 w-full grid-cols-3 gap-2.5">
-        {testimonials.map((t) => (
-          <TestimonialCard key={t.name} {...t} />
+      <div ref={ref} className="my-10 grid h-112.5 w-full grid-cols-3 gap-2.5">
+        {testimonials.map((t, i) => (
+          <motion.div
+            key={t.name}
+            custom={i}
+            variants={cardVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="h-full"
+          >
+            <TestimonialCard {...t} />
+          </motion.div>
         ))}
       </div>
     </div>
