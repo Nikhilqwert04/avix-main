@@ -1,3 +1,4 @@
+import Benefits from "@/components/landing/Benefits/Benefits";
 import CaseStudy from "@/components/landing/CaseStudy";
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
@@ -22,6 +23,7 @@ const page = () => {
         <Working />
         <Solution />
         <CaseStudy />
+        <Benefits />
       </div>
     </div>
   );
