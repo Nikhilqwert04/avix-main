@@ -3,58 +3,58 @@ import React from "react";
 
 const RightSection = () => {
   return (
-    <div className="w-full rounded-2xl bg-[#2c2b2b21] p-4 md:p-8 lg:w-[600px]">
-      <form className="flex w-full flex-col gap-4 md:gap-6">
-        <div className="flex w-full flex-col gap-4 md:flex-row md:gap-10">
+    <div className="w-full rounded-2xl bg-[#0F0F0F] p-4 md:px-4 md:py-6 lg:w-[690px]">
+      <form className="flex w-full flex-col gap-4 md:gap-3">
+        <div className="gap- flex w-full flex-col md:flex-row md:gap-5">
           <div className="flex w-full flex-col gap-2">
-            <label className="text-lg text-white md:text-xl">First Name</label>
+            <label className="text-lg text-white md:text-sm">First Name</label>
             <input
               type="text"
               placeholder="Jane"
-              className="h-13 w-full rounded-xl border border-[#999999]/10 bg-transparent px-4 text-lg text-white transition-colors focus:border-white focus:outline-none"
+              className="text-md h-12 w-full rounded-lg border border-[#999999]/10 bg-[#1D1D1D] px-4 text-white transition-colors focus:border-white focus:outline-none"
             />
           </div>
           <div className="flex w-full flex-col gap-2">
-            <label className="text-lg text-white md:text-xl">Last Name</label>
+            <label className="text-lg text-white md:text-sm">Last Name</label>
             <input
               type="text"
               placeholder="Smith"
-              className="h-13 w-full rounded-xl border border-[#999999]/10 bg-transparent px-4 text-lg text-white transition-colors focus:border-white focus:outline-none"
+              className="text-md h-12 w-full rounded-lg border border-[#999999]/10 bg-[#1D1D1D] px-4 text-white transition-colors focus:border-white focus:outline-none"
             />
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-4 md:flex-row md:gap-10">
+        <div className="flex w-full flex-col gap-4 md:flex-row md:gap-5">
           <div className="flex w-full flex-col gap-2">
-            <label className="text-lg text-white md:text-xl">Email</label>
+            <label className="text-lg text-white md:text-sm">Email</label>
             <input
               type="email"
               placeholder="abcd@gmail.com"
-              className="h-13 w-full rounded-xl border border-[#999999]/10 bg-transparent px-4 text-lg text-white transition-colors focus:border-white focus:outline-none"
+              className="text-md h-12 w-full rounded-lg border border-[#999999]/10 bg-[#1D1D1D] px-4 text-white transition-colors focus:border-white focus:outline-none"
             />
           </div>
           <div className="flex w-full flex-col gap-2">
-            <label className="text-lg text-white md:text-xl">Phone</label>
+            <label className="text-lg text-white md:text-sm">Phone</label>
             <input
               type="tel"
               placeholder="+1234567890"
-              className="h-13 w-full rounded-xl border border-[#999999]/10 bg-transparent px-4 text-lg text-white transition-colors focus:border-white focus:outline-none"
+              className="text-md h-12 w-full rounded-lg border border-[#999999]/10 bg-[#1D1D1D] px-4 text-white transition-colors focus:border-white focus:outline-none"
             />
           </div>
         </div>
 
-        <div className="mt-2 flex w-full flex-col gap-2 md:mt-4">
-          <label className="text-lg text-white md:text-xl">Message</label>
+        <div className="mt-2 flex w-full flex-col gap-2 md:mt-1">
+          <label className="text-lg text-white md:text-sm">Message</label>
           <textarea
-            placeholder="Please Enter your text here...!!!"
-            className="w-full resize-none rounded-2xl border border-[#999999]/10 bg-transparent p-4 text-lg text-white transition-colors focus:border-white focus:outline-none"
+            placeholder="Write your message here..."
+            className="w-full resize-none rounded-xl border border-[#999999]/10 bg-[#1D1D1D] p-4 text-sm text-white transition-colors focus:border-white focus:outline-none"
           ></textarea>
         </div>
 
         <input
           type="submit"
           value="Submit Form"
-          className="mt-4 w-full cursor-pointer rounded-full bg-[#999999] py-4 text-lg font-semibold text-black transition-colors hover:bg-white md:text-xl"
+          className="mt-2 w-full cursor-pointer rounded-full bg-[#999999] py-2 text-base font-semibold text-black transition-colors hover:bg-white md:text-base"
         />
       </form>
     </div>
