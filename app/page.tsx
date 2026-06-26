@@ -1,6 +1,7 @@
 import Benefits from "@/components/landing/Benefits/Benefits";
 import CaseStudy from "@/components/landing/CaseStudy";
 import { Comparision } from "@/components/landing/Comparision";
+import { Contact } from "@/components/landing/Contact";
 import Faq from "@/components/landing/Faq";
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
@@ -35,9 +36,7 @@ const page = () => {
         <Comparision />
         <Faq />
       </div>
-      <div className="flex h-screen w-screen items-center justify-center text-6xl">
-        Working...
-      </div>
+      <Contact />
     </div>
   );
 };
