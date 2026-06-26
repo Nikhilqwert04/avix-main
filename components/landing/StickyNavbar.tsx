@@ -3,23 +3,6 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import {
-  SiStripe,
-  SiNotion,
-  SiLinear,
-  SiVercel,
-  SiFigma,
-  SiOpenai,
-} from "react-icons/si";
-
-const companies = [
-  { name: "Stripe", icon: SiStripe },
-  { name: "Notion", icon: SiNotion },
-  { name: "Linear", icon: SiLinear },
-  { name: "Vercel", icon: SiVercel },
-  { name: "Figma", icon: SiFigma },
-  { name: "OpenAI", icon: SiOpenai },
-];
 
 const leftLinks = [
   { label: "Home", href: "/" },
@@ -33,20 +16,20 @@ const rightLinks = [
 
 const ease = [0, 0, 0.2, 1] as const;
 
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+const StickyNavbar = () => {
+  const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => setVisible(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div
-      className={`absolute top-0 left-1/2 z-99 hidden -translate-x-1/2 transition-transform duration-300 ease-in-out sm:block ${
-        scrolled ? "-translate-y-full" : "translate-y-0"
+      className={`fixed top-0 left-1/2 z-[100] hidden -translate-x-1/2 transition-transform duration-300 ease-in-out sm:block ${
+        visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div
@@ -187,73 +170,4 @@ const Navbar = () => {
   );
 };
 
-export const Footer = () => {
-  return (
-    <div className="absolute bottom-1 left-1/2 z-99 mt-10 hidden w-fit -translate-x-1/2 sm:block">
-      <div className="relative rotate-180">
-        {/* Background shape */}
-        <div className="flex items-start">
-          {/* Left Curve */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="87"
-            height="50"
-            fill="none"
-            overflow="visible"
-            className="shrink-0"
-          >
-            <path
-              d="M 0 0 C 45.98 0 37 50 87 50 L 87 0 Z"
-              fill="rgb(0, 0, 0)"
-            />
-          </svg>
-
-          {/* Center Black Tab */}
-          <div className="h-[50px] w-[420px] shrink-0 bg-black" />
-
-          {/* Right Curve */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="87"
-            height="50"
-            fill="none"
-            overflow="visible"
-            className="shrink-0"
-          >
-            <path d="M 87 0 C 41.02 0 50 50 0 50 L 0 0 Z" fill="rgb(0, 0, 0)" />
-          </svg>
-        </div>
-      </div>
-
-      {/* infinite marquee of trust logos */}
-      <div
-        className="absolute inset-x-[87px] top-[7px] flex h-[36px] items-center justify-center overflow-hidden"
-        style={{
-          maskImage:
-            "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
-          maxWidth: "420px",
-        }}
-      >
-        <div className="animate-marquee flex w-max items-center gap-10 whitespace-nowrap">
-          {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex items-center gap-10">
-              {companies.map(({ name, icon: Icon }) => (
-                <div
-                  key={name}
-                  className="flex items-center gap-2 text-neutral-100"
-                >
-                  <Icon size={18} />
-                  <span className="text-base font-medium tracking-wide">
-                    {name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Navbar;
+export default StickyNavbar;

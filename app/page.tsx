@@ -5,6 +5,7 @@ import Faq from "@/components/landing/Faq";
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
 import Navbar, { Footer } from "@/components/landing/Navbar";
+import StickyNavbar from "@/components/landing/StickyNavbar";
 import Pricing from "@/components/landing/Pricing";
 import Solution from "@/components/landing/Solution";
 import Testemonials from "@/components/landing/Testemonials";
@@ -15,6 +16,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="flex min-h-screen w-screen flex-col">
+      <StickyNavbar />
       <div className="flex min-h-screen flex-col items-center px-6">
         <Landing />
         <div className="relative">
