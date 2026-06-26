@@ -26,7 +26,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { label: "Services", href: "#" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
 
         {/* Logo — pinned to center */}
-        <div className="pointer-events-none absolute top-0 left-1/2 flex h-[50px] -translate-x-1/2 items-center">
+        <div className="pointer-events-none absolute top-0 left-1/2 flex h-[50px] -translate-x-1/2 items-center pr-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22"
