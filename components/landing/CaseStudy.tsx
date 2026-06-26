@@ -16,12 +16,12 @@ const cases = [
       "Our platform handled 12× normal load on Black Friday — zero downtime, $840K in revenue that day.",
   },
   {
-    bg: "https://i.pinimg.com/736x/6d/30/e2/6d30e280e89480be891a16659ca1725f.jpg",
+    bg: "https://i.pinimg.com/1200x/8b/9e/ac/8b9eac2880245bb6580219eb7b05bef4.jpg",
     quote:
       "Six spreadsheets replaced with one internal platform in eight weeks. Our team actually uses it.",
   },
   {
-    bg: "https://i.pinimg.com/736x/96/15/1f/96151f90e2fa2c8c18c0cf6689244873.jpg",
+    bg: "https://i.pinimg.com/736x/85/bd/91/85bd9102750e56bcb411476f2f796b10.jpg",
     quote:
       "SSO, audit logs, team permissions — shipped in three sprints. It unlocked our first Fortune 500 contract.",
   },

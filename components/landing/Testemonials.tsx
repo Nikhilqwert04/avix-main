@@ -52,7 +52,7 @@ const testimonials: TestimonialCardProps[] = [
     quote:
       "Avix shipped our MVP in six weeks — a real product, not a prototype. We used it to close our seed round.",
     image:
-      "https://i.pinimg.com/736x/ce/1c/b1/ce1cb1c471f0011d93dacc29ce85b37a.jpg",
+      "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Emma Brandt",
@@ -60,7 +60,7 @@ const testimonials: TestimonialCardProps[] = [
     quote:
       "Three agencies before Avix. None delivered. They took over, cleaned the codebase, and shipped v1 in under two months.",
     image:
-      "https://i.pinimg.com/1200x/3b/11/41/3b1141a3657aadacbb9c659388131123.jpg",
+      "https://plus.unsplash.com/premium_photo-1677368597077-009727e906db?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Theo Nakamura",
@@ -68,7 +68,7 @@ const testimonials: TestimonialCardProps[] = [
     quote:
       "They push back when something's wrong. You want a team with opinions — not order-takers who just nod.",
     image:
-      "https://i.pinimg.com/1200x/16/61/70/1661707d7524042da1b13236e832b2b7.jpg",
+      "https://images.unsplash.com/photo-1745434159123-5b99b94206ca?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

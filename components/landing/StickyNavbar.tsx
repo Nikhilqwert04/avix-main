@@ -10,7 +10,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { label: "Services", href: "#" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
 
