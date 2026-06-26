@@ -12,7 +12,7 @@ const MainHeading = ({
   return (
     <h1
       className={cn(
-        "max-w-xl text-center text-[46px] leading-none font-semibold tracking-tighter",
+        "max-w-xl text-center text-3xl leading-tight font-semibold tracking-tighter sm:text-4xl md:text-[46px] md:leading-none",
         className
       )}
     >

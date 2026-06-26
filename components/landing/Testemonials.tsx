@@ -84,7 +84,10 @@ export default function Testemonials() {
         <MainHeading title="Don't Settle" className="text-start" />
       </div>
 
-      <div ref={ref} className="my-10 grid h-112.5 w-full grid-cols-3 gap-2.5">
+      <div
+        ref={ref}
+        className="my-10 grid h-auto w-full grid-cols-1 gap-2.5 md:h-112.5 md:grid-cols-3"
+      >
         {testimonials.map((t, i) => (
           <motion.div
             key={t.name}

@@ -86,7 +86,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 export default function Faq() {
   return (
-    <div className="mt-40 flex w-full items-start justify-between">
+    <div className="mt-20 flex w-full flex-col items-start justify-between gap-8 md:mt-40 md:flex-row md:gap-0">
       <Glow
         width="50%"
         height="40%"
@@ -95,7 +95,7 @@ export default function Faq() {
         className="right-36 -z-99 -rotate-20"
       />
 
-      <div className="flex h-full w-[30%] flex-col gap-2">
+      <div className="flex h-full w-full flex-col gap-2 md:w-[30%]">
         <InfoPill title="FAQ" />
         <div className="flex flex-col">
           <MainHeading title="Common" className="text-start" />
@@ -107,7 +107,7 @@ export default function Faq() {
       </div>
 
       <motion.div
-        className="flex w-[60%] flex-col gap-3"
+        className="flex w-full flex-col gap-3 md:w-[60%]"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

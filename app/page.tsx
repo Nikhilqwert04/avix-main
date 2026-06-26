@@ -17,7 +17,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="flex min-h-screen w-screen flex-col">
+    <div className="flex min-h-screen w-full flex-col overflow-x-hidden">
       <StickyNavbar />
       <div className="flex min-h-screen flex-col items-center px-6">
         <Landing />
@@ -26,7 +26,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col">
+      <div className="mx-auto flex w-full max-w-6xl flex-col px-5 md:px-0">
         <Hours />
         <Working />
         <Solution />

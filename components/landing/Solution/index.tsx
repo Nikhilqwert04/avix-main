@@ -14,7 +14,7 @@ const Solution = () => {
       <InfoPill title="Services" />
       <MainHeading title="What We Build" />
 
-      <div className="mt-8 grid h-screen w-full grid-cols-3 grid-rows-5 gap-5">
+      <div className="mt-8 grid h-auto w-full grid-cols-1 gap-5 md:h-screen md:grid-cols-3 md:grid-rows-5">
         <FirstCard />
         <SecondCard />
         <ThirdCard />

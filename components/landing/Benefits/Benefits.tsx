@@ -68,10 +68,10 @@ const Benefits = () => {
         className="max-w-lg text-start"
       />
 
-      <div className="mt-10 grid h-[370px] grid-cols-5 grid-rows-[60px_1fr_1fr] gap-2">
+      <div className="mt-10 grid h-auto grid-cols-2 gap-2 md:h-[370px] md:grid-cols-5 md:grid-rows-[60px_1fr_1fr]">
         {/* col-1 row-3: Time Saving — from left */}
         <motion.div
-          className="col-start-1 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
+          className="col-auto row-auto min-h-[140px] rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 md:col-start-1 md:row-start-3 md:min-h-0"
           {...fromLeft(0)}
         >
           <CardContent
@@ -83,7 +83,7 @@ const Benefits = () => {
 
         {/* col-2 row-3: Faster Workflows — from left */}
         <motion.div
-          className="col-start-2 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
+          className="col-auto row-auto min-h-[140px] rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 md:col-start-2 md:row-start-3 md:min-h-0"
           {...fromLeft(0.1)}
         >
           <CardContent
@@ -95,7 +95,7 @@ const Benefits = () => {
 
         {/* col-2 row-2: Cost Efficient — from left */}
         <motion.div
-          className="col-start-2 row-start-2 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
+          className="col-auto row-auto min-h-[140px] rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 md:col-start-2 md:row-start-2 md:min-h-0"
           {...fromLeft(0.05)}
         >
           <CardContent
@@ -107,7 +107,7 @@ const Benefits = () => {
 
         {/* col-3 rows-1-4: Center logo card — from bottom */}
         <motion.div
-          className="relative col-start-3 row-start-1 row-end-4 flex justify-center rounded-2xl border border-neutral-700 bg-linear-to-tr from-black via-black/80 to-neutral-700 mask-b-from-30 pt-10"
+          className="relative col-span-2 row-auto flex min-h-[160px] justify-center rounded-2xl border border-neutral-700 bg-linear-to-tr from-black via-black/80 to-neutral-700 mask-b-from-30 pt-10 md:col-span-1 md:col-start-3 md:row-start-1 md:row-end-4 md:min-h-0"
           {...fromBottom(0)}
         >
           <div
@@ -141,7 +141,7 @@ const Benefits = () => {
 
         {/* col-4 row-2: Better Insights — from right */}
         <motion.div
-          className="col-start-4 row-start-2 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
+          className="col-auto row-auto min-h-[140px] rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 md:col-start-4 md:row-start-2 md:min-h-0"
           {...fromRight(0.05)}
         >
           <CardContent
@@ -153,7 +153,7 @@ const Benefits = () => {
 
         {/* col-4 row-3: Higher Accuracy — from right */}
         <motion.div
-          className="col-start-4 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
+          className="col-auto row-auto min-h-[140px] rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 md:col-start-4 md:row-start-3 md:min-h-0"
           {...fromRight(0.1)}
         >
           <CardContent
@@ -165,7 +165,7 @@ const Benefits = () => {
 
         {/* col-5 row-3: Easy Scaling — from right */}
         <motion.div
-          className="col-start-5 row-start-3 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700"
+          className="col-auto row-auto min-h-[140px] rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 md:col-start-5 md:row-start-3 md:min-h-0"
           {...fromRight(0)}
         >
           <CardContent

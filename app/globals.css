@@ -4,6 +4,12 @@
   --font-sans: var(--font-inter-display), sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   font-family: var(--font-inter-display), sans-serif;
 }

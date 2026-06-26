@@ -453,13 +453,13 @@ export default function Working() {
   return (
     <div className="flex w-full flex-col gap-2 pb-24">
       <InfoPill title="How it works" />
-      <h1 className="max-w-md text-[46px] leading-[1.2] font-semibold tracking-tighter">
+      <h1 className="max-w-md text-3xl leading-tight font-semibold tracking-tighter sm:text-4xl md:text-[46px] md:leading-[1.2]">
         Built to ship, not to impress.
       </h1>
 
       <div
         ref={ref}
-        className="mt-5 grid h-[458.5px] w-full grid-cols-3 gap-[20px]"
+        className="mt-5 grid h-auto w-full grid-cols-1 gap-[20px] md:h-[458.5px] md:grid-cols-3"
       >
         {[
           {
@@ -487,7 +487,7 @@ export default function Working() {
             variants={cardVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="relative w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404]"
+            className="relative min-h-[380px] w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] md:min-h-0"
           >
             <Glow className="top-3 left-11" width="80%" height="20%" />
             <StepCount step={card.step} />

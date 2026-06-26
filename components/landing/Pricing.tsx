@@ -98,14 +98,17 @@ export default function Pricing() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div className="mt-20 flex flex-col gap-2">
+    <div className="mt-12 flex flex-col gap-2 md:mt-20">
       <InfoPill title="Pricing" />
       <MainHeading
         title="Clear Engagements. No Surprises."
         className="text-start"
       />
 
-      <div ref={ref} className="my-10 grid h-113.5 w-full grid-cols-3 gap-2.5">
+      <div
+        ref={ref}
+        className="my-10 grid h-auto w-full grid-cols-1 gap-2.5 md:h-113.5 md:grid-cols-3"
+      >
         {plans.map((plan, i) => (
           <motion.div
             key={plan.title}

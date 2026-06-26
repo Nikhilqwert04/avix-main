@@ -55,14 +55,14 @@ export default function FooterSection() {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="mx-auto w-full max-w-6xl pb-6">
+    <div className="mx-auto w-full max-w-6xl px-5 pb-6 md:px-0">
       <div className="relative overflow-hidden rounded-4xl bg-linear-to-b from-[#232323] to-[#040404]">
         <Glow className="top-3 left-11" width="60%" height="25%" />
 
         <LogoPill />
 
         {/* Main content */}
-        <div className="flex items-start justify-between px-10 pt-8 pb-10">
+        <div className="flex flex-col gap-10 px-6 pt-8 pb-10 md:flex-row md:items-start md:justify-between md:gap-0 md:px-10">
           {/* Left: tagline + newsletter */}
           <div className="flex flex-col gap-6">
             <h2 className="text-[30px] leading-tight font-bold tracking-tight">
@@ -90,7 +90,7 @@ export default function FooterSection() {
           </div>
 
           {/* Right: nav columns */}
-          <div className="flex gap-20 pt-2">
+          <div className="flex gap-12 pt-2 sm:gap-20">
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold text-white">Pages</p>
               {["Home", "Work", "Services", "Blog", "Contact"].map((item) => (
@@ -119,7 +119,7 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex items-center justify-between border-t border-neutral-800 px-10 py-4">
+        <div className="flex flex-col items-center gap-3 border-t border-neutral-800 px-6 py-4 text-center md:flex-row md:justify-between md:gap-0 md:px-10 md:text-left">
           <p className="text-xs text-neutral-500">
             © 2025 Avix. All rights reserved.
           </p>

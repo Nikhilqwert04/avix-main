@@ -13,7 +13,7 @@ export const Comparision = () => {
   return (
     <div
       ref={ref}
-      className="relative mt-20 flex h-fit flex-col items-center gap-3 overflow-hidden"
+      className="relative mt-12 flex h-fit flex-col items-center gap-3 overflow-hidden md:mt-20"
     >
       <motion.div
         initial={{ opacity: 0, y: -32 }}
@@ -35,7 +35,7 @@ export const Comparision = () => {
         initial={{ opacity: 0, y: -32 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-        className="relative mt-10 flex w-[50%] justify-between rounded-full border border-neutral-800 bg-neutral-900 p-2"
+        className="relative mt-10 flex w-[90%] justify-between rounded-full border border-neutral-800 bg-neutral-900 p-2 text-sm md:w-[50%] md:text-base"
       >
         <div className="flex items-center gap-2">
           <CgSandClock />
@@ -45,7 +45,7 @@ export const Comparision = () => {
           <BsLightning />
           Working with Avix
         </div>
-        <div className="absolute -top-5 left-62">
+        <div className="absolute -top-5 left-62 hidden md:block">
           <div className="flex size-20 items-center justify-center rounded-full bg-white p-5 text-2xl font-semibold text-black">
             VS
           </div>
@@ -57,10 +57,10 @@ export const Comparision = () => {
         animate={inView ? { opacity: 1, scaleY: 1 } : {}}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.35 }}
         style={{ originY: 0 }}
-        className="absolute top-61 -z-9 h-[72%] w-0.5 bg-gradient-to-b from-white/40 via-neutral-600/30 to-transparent"
+        className="absolute top-61 -z-9 hidden h-[72%] w-0.5 bg-gradient-to-b from-white/40 via-neutral-600/30 to-transparent md:block"
       />
 
-      <div className="mt-5 grid h-102.5 w-[80%] grid-cols-2 gap-10">
+      <div className="mt-5 grid h-auto w-full grid-cols-1 gap-6 md:h-102.5 md:w-[80%] md:grid-cols-2 md:gap-10">
         <motion.div
           initial={{ opacity: 0, x: -64 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}

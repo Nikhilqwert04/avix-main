@@ -126,7 +126,7 @@ const outreachMethods: {
 
 const FifthCard = () => (
   <motion.div
-    className="relative row-span-3 w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-[20px]"
+    className="relative row-auto min-h-[300px] w-[1fr] overflow-hidden rounded-2xl bg-linear-to-b from-[#232323] to-[#040404] p-[20px] md:row-span-3 md:min-h-0"
     initial={{ y: 48, opacity: 0 }}
     whileInView={{ y: 0, opacity: 1 }}
     viewport={{ once: true, amount: 0.15 }}

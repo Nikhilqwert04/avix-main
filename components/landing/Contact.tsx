@@ -20,7 +20,7 @@ const fadeUp = {
 export const Contact = () => {
   return (
     <motion.div
-      className="relative mt-40 flex h-[75vh] w-full flex-col items-center justify-center gap-7 overflow-hidden rounded-2xl"
+      className="relative mt-20 flex h-[75vh] w-full flex-col items-center justify-center gap-7 overflow-hidden rounded-2xl px-5 md:mt-40 md:px-0"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
@@ -75,7 +75,7 @@ export const Contact = () => {
 
         {/* Heading */}
         <motion.div variants={fadeUp} className="max-w-2xl text-center">
-          <h2 className="text-[52px] leading-[1.05] font-bold tracking-[-0.04em] text-white">
+          <h2 className="text-3xl leading-tight font-bold tracking-[-0.04em] text-white sm:text-4xl md:text-[52px] md:leading-[1.05]">
             Ready to Build Something
             <br />
             That Actually Ships?
@@ -83,7 +83,10 @@ export const Contact = () => {
         </motion.div>
 
         {/* Buttons */}
-        <motion.div variants={fadeUp} className="flex items-center gap-3">
+        <motion.div
+          variants={fadeUp}
+          className="flex flex-wrap items-center justify-center gap-3"
+        >
           <Link
             href="#"
             className="rounded-full bg-neutral-100 px-6 py-2.5 text-[15px] font-semibold text-neutral-950 transition-colors duration-150 hover:bg-neutral-300"
