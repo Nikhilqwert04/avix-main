@@ -21,7 +21,7 @@ const outreachMethods: {
   dot: boolean;
 }[] = [
   {
-    label: "Linkedin",
+    label: "Semantic search",
     on: true,
     dot: false,
     svg: (
@@ -31,8 +31,8 @@ const outreachMethods: {
     ),
   },
   {
-    label: "Email",
-    on: false,
+    label: "Recommendation engine",
+    on: true,
     dot: false,
     svg: (
       <svg
@@ -51,8 +51,8 @@ const outreachMethods: {
     ),
   },
   {
-    label: "Messenger",
-    on: true,
+    label: "Auto-tagging pipeline",
+    on: false,
     dot: false,
     svg: (
       <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
@@ -61,7 +61,7 @@ const outreachMethods: {
     ),
   },
   {
-    label: "Cold calling",
+    label: "Conversational assistant",
     on: false,
     dot: false,
     svg: (
@@ -82,7 +82,7 @@ const outreachMethods: {
     ),
   },
   {
-    label: "SMS",
+    label: "Voice interface",
     on: false,
     dot: true,
     svg: (
@@ -103,7 +103,7 @@ const outreachMethods: {
     ),
   },
   {
-    label: "Whatsapp",
+    label: "Predictive analytics",
     on: false,
     dot: true,
     svg: (
@@ -113,7 +113,7 @@ const outreachMethods: {
     ),
   },
   {
-    label: "Instagram",
+    label: "Custom LLM fine-tuning",
     on: false,
     dot: true,
     svg: (
@@ -133,8 +133,8 @@ const FifthCard = () => (
     transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.08 }}
   >
     <p className="text-lg font-medium tracking-tighter text-neutral-400">
-      <span className="font-semibold text-white">AI Outreach.</span> Automate
-      multi-channel outreach and turn cold leads into paying customers.
+      <span className="font-semibold text-white">AI-Powered Products.</span> We
+      integrate AI where it creates real value — not as a feature checkbox.
     </p>
     <Glow className="top-22 left-11" width="80%" height="20%" opacity={0.2} />
 
@@ -157,7 +157,7 @@ const FifthCard = () => (
             </svg>
           </span>
           <span className="text-[12px] font-semibold text-white">
-            Marketing Suite
+            AI Feature Suite
           </span>
         </div>
         <div className="flex items-center gap-1.5">
@@ -173,7 +173,7 @@ const FifthCard = () => (
           <BsSearch size={13} className="shrink-0 text-neutral-500" />
           <div className="flex flex-1 flex-col gap-1.5">
             <span className="text-xs text-neutral-400">
-              Searching for leads...
+              Scanning product requirements...
             </span>
             <div className="relative h-[2px] w-full overflow-hidden rounded-full bg-neutral-700">
               <motion.div
@@ -207,7 +207,7 @@ const FifthCard = () => (
       <div className="mx-4 rounded-lg border border-neutral-600">
         <div className="mx-4 mt-3 mb-3 flex shrink-0 items-center justify-between rounded-lg">
           <span className="text-sm text-[12px] text-neutral-300">
-            Outreaching Methods..
+            AI Modules..
           </span>
           <BsChevronUp size={13} className="text-neutral-400" />
         </div>

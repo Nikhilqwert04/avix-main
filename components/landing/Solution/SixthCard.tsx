@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Glow from "../../Glow";
 
 const chatMessages = [
-  "Custom chat bots",
-  "Book an appointment",
-  "What are your hours?",
-  "Track my order",
-  "Get a quote",
+  "Design to code, seamlessly",
+  "No handoffs, no errors",
+  "One team, start to finish",
+  "Figma to production",
+  "Built right from day one",
 ];
 
 const SixthCard = () => {
@@ -84,7 +84,7 @@ const SixthCard = () => {
               <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
             </svg>
           </div>
-          <span className="text-xs text-neutral-500">Calista</span>
+          <span className="text-xs text-neutral-500">Designer</span>
         </div>
 
         {/* Input / message bubble */}
@@ -125,7 +125,7 @@ const SixthCard = () => {
 
         {/* Customer label */}
         <div className="flex items-center justify-end gap-2">
-          <span className="text-xs text-neutral-500">Customer</span>
+          <span className="text-xs text-neutral-500">Engineer</span>
           <div className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-700">
             <svg
               width="10"
@@ -143,9 +143,9 @@ const SixthCard = () => {
       </div>
 
       <p className="mt-8 text-lg font-medium tracking-tighter text-neutral-400">
-        <span className="font-semibold text-white">Custom Chatbots.</span>{" "}
-        Provide instant, accurate responses to customers anytime with
-        intelligent AI.
+        <span className="font-semibold text-white">Product Design & UX.</span>{" "}
+        Design and engineering as one team — no handoffs, no translation errors,
+        no surprises.
       </p>
     </motion.div>
   );

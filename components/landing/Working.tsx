@@ -62,9 +62,9 @@ export const StepCount = ({ step }: { step: string }) => {
 export const AnalyzingContent = () => (
   <div className="absolute m-4 w-[90%] rounded-xl bg-linear-to-b from-white/40 to-transparent mask-b-from-30 p-px">
     <div className="rounded-[11px] bg-neutral-900 p-4">
-      <span className="t font-medium">Analyzing Workflow</span>
+      <span className="t font-medium">Product Scope</span>
       <p className="text-[12px] text-neutral-300">
-        To get an idea of what can be automated
+        Translating your vision into a buildable plan
       </p>
 
       <hr className="my-4 text-neutral-500" />
@@ -92,8 +92,8 @@ export const AnalyzingContent = () => (
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="text-[10px] text-neutral-500">Bottlenecks</span>
-            <span className="tracking-tighter">15+ issues found</span>
+            <span className="text-[10px] text-neutral-500">Requirements</span>
+            <span className="tracking-tighter">12 user stories defined</span>
           </div>
         </div>
 
@@ -122,7 +122,7 @@ export const AnalyzingContent = () => (
           </div>
 
           <div className="flex w-full flex-col gap-1">
-            <span className="tracking-tighter">85% repeated tasks</span>
+            <span className="tracking-tighter">Tech stack selected</span>
             <div className="h-[3px] w-full overflow-hidden rounded-full bg-neutral-700">
               <div className="h-full w-[55%] rounded-full bg-gradient-to-r from-white to-neutral-400" />
             </div>
@@ -145,10 +145,8 @@ export const AnalyzingContent = () => (
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="text-[10px] text-neutral-500">
-              Communication Gaps
-            </span>
-            <span className="tracking-tighter">Needs to be automated</span>
+            <span className="text-[10px] text-neutral-500">MVP Timeline</span>
+            <span className="tracking-tighter">8-week sprint confirmed</span>
           </div>
         </div>
 
@@ -157,7 +155,7 @@ export const AnalyzingContent = () => (
             <BsClock />
           </div>
           <div className="flex w-full flex-col gap-1">
-            <span className="tracking-tighter">Time consumption</span>
+            <span className="tracking-tighter">Risk factors surfaced</span>
             <div className="h-[3px] w-full overflow-hidden rounded-full bg-neutral-700">
               <div className="h-full w-[35%] rounded-full bg-gradient-to-r from-white to-neutral-400" />
             </div>
@@ -169,10 +167,8 @@ export const AnalyzingContent = () => (
             <BiCalendar />
           </div>
           <div className="flex flex-col">
-            <span className="text-[10px] text-neutral-500">
-              Missed Deadlines
-            </span>
-            <span className="tracking-tighter">30% Missed Deadlines</span>
+            <span className="text-[10px] text-neutral-500">Scope Status</span>
+            <span className="tracking-tighter">Build scope approved</span>
           </div>
         </div>
       </div>
@@ -294,10 +290,8 @@ export const Integration = () => (
 export const AnalyzingContent2 = () => (
   <div className="absolute m-4 w-[90%] rounded-xl bg-linear-to-b from-white/30 to-transparent mask-b-from-0 p-px">
     <div className="rounded-[11px] bg-neutral-900 p-4">
-      <span className="font-medium">Updates</span>
-      <p className="text-[12px] text-neutral-300">
-        keep functions runs smoothly
-      </p>
+      <span className="font-medium">v1.0.0 — Production</span>
+      <p className="text-[12px] text-neutral-300">All systems normal</p>
 
       <hr className="my-2 text-neutral-500" />
 
@@ -348,8 +342,8 @@ export const AnalyzingContent2 = () => (
         </div>
         <div className="flex h-full w-full flex-col justify-center">
           <div className="flex flex-col pt-2 leading-4">
-            <p className="font-semibold !text-white">Sep 2025 update</p>
-            <p className="text-[12px]">List of updates we made in Sep</p>
+            <p className="font-semibold !text-white">Launch changelog</p>
+            <p className="text-[12px]">What shipped in this release</p>
             <hr className="my-2 text-neutral-500" />
           </div>
           <div className="flex flex-col gap-2 leading-1">
@@ -360,35 +354,7 @@ export const AnalyzingContent2 = () => (
                   strokeWidth={9}
                   className="text-green-600"
                 />
-                <p className="text-[13px]">Added email automation</p>
-              </div>
-              <div>
-                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <Icons.Dot
-                  size={16}
-                  strokeWidth={9}
-                  className="text-orange-500"
-                />
-                <p className="text-[13px]">supports larger datasets</p>
-              </div>
-              <div>
-                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <Icons.Dot
-                  size={16}
-                  strokeWidth={9}
-                  className="text-blue-600"
-                />
-                <p className="text-[13px]">UI bugs on mobile dashboard</p>
+                <p className="text-[13px]">Core authentication system</p>
               </div>
               <div>
                 <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
@@ -402,21 +368,7 @@ export const AnalyzingContent2 = () => (
                   strokeWidth={9}
                   className="text-green-600"
                 />
-                <p className="text-[13px]">Quick start onboarding</p>
-              </div>
-              <div>
-                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <Icons.Dot
-                  size={16}
-                  strokeWidth={9}
-                  className="text-orange-500"
-                />
-                <p className="text-[13px]">Response time on AI chat </p>
+                <p className="text-[13px]">Stripe billing integration</p>
               </div>
               <div>
                 <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
@@ -430,9 +382,49 @@ export const AnalyzingContent2 = () => (
                   strokeWidth={9}
                   className="text-blue-600"
                 />
-                <p className="text-[13px]">
-                  Stripe integration for automated billing
-                </p>
+                <p className="text-[13px]">Redesigned dashboard layout</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-orange-500"
+                />
+                <p className="text-[13px]">Edge case in data export pipeline</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-green-600"
+                />
+                <p className="text-[13px]">SSO and team permissions</p>
+              </div>
+              <div>
+                <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Icons.Dot
+                  size={16}
+                  strokeWidth={9}
+                  className="text-blue-600"
+                />
+                <p className="text-[13px]">API response time — down 40%</p>
               </div>
               <div>
                 <Icons.SquareArrowOutUpRight size={9} strokeWidth={1.25} />
@@ -462,7 +454,7 @@ export default function Working() {
     <div className="flex w-full flex-col gap-2 pb-24">
       <InfoPill title="How it works" />
       <h1 className="max-w-md text-[46px] leading-[1.2] font-semibold tracking-tighter">
-        How we help you get real results with AI
+        Built to ship, not to impress.
       </h1>
 
       <div
@@ -473,20 +465,20 @@ export default function Working() {
           {
             step: "Step 1.",
             content: <AnalyzingContent />,
-            title: "Analyzing workflow",
-            desc: "We find where AI can save you time and boost efficiency.",
+            title: "Discovery & Strategy",
+            desc: "We scope goals, users, and stack before a single line of code is written.",
           },
           {
             step: "Step 2.",
             content: <Integration />,
-            title: "Integrating Solutions",
-            desc: "We connect smart AI tools into your existing systems.",
+            title: "Design & Development",
+            desc: "Weekly sprints, real deliverables, direct access to your build team.",
           },
           {
             step: "Step 3.",
             content: <AnalyzingContent2 />,
-            title: "Regular Maintenance",
-            desc: "We keep your AI running smooth and always up to date.",
+            title: "Launch & Scale",
+            desc: "We deploy, monitor, and hand off clean. No lock-in.",
           },
         ].map((card, i) => (
           <motion.div

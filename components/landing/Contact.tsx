@@ -69,16 +69,16 @@ export const Contact = () => {
             />
           </svg>
           <span className="text-[18px] font-semibold tracking-tight text-white">
-            Notch
+            Avix
           </span>
         </motion.div>
 
         {/* Heading */}
         <motion.div variants={fadeUp} className="max-w-2xl text-center">
           <h2 className="text-[52px] leading-[1.05] font-bold tracking-[-0.04em] text-white">
-            Ready to Automate Your Business
+            Ready to Build Something
             <br />
-            with Notch Automation?
+            That Actually Ships?
           </h2>
         </motion.div>
 
@@ -88,13 +88,13 @@ export const Contact = () => {
             href="#"
             className="rounded-full bg-neutral-100 px-6 py-2.5 text-[15px] font-semibold text-neutral-950 transition-colors duration-150 hover:bg-neutral-300"
           >
-            Let&apos;s automate
+            Start a project
           </Link>
           <Link
             href="#"
             className="rounded-full bg-neutral-800 px-6 py-2.5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-neutral-700"
           >
-            Need to talk first
+            Just have a question?
           </Link>
         </motion.div>
       </motion.div>

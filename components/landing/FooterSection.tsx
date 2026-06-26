@@ -35,7 +35,7 @@ const LogoPill = () => (
           />
         </g>
       </svg>
-      <span className="pt-2 text-sm font-semibold text-white">Avixx</span>
+      <span className="pt-2 text-sm font-semibold text-white">Avix</span>
     </div>
 
     <div className="absolute top-0 -left-4 rotate-180">
@@ -66,18 +66,18 @@ export default function FooterSection() {
           {/* Left: tagline + newsletter */}
           <div className="flex flex-col gap-6">
             <h2 className="text-[30px] leading-tight font-bold tracking-tight">
-              Making Automation
+              Product Engineering
               <br />
-              Simple and Reliable
+              Done Right.
             </h2>
             <div className="flex flex-col gap-3">
               <p className="text-sm font-medium text-neutral-300">
-                Join our newsletter
+                Stay in the loop
               </p>
               <div className="relative flex items-center gap-0">
                 <input
                   type="email"
-                  placeholder="name@email.com"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-52 rounded-full border border-neutral-700 bg-neutral-800/60 px-4 py-2 text-sm text-white outline-none placeholder:text-neutral-500"
@@ -93,7 +93,7 @@ export default function FooterSection() {
           <div className="flex gap-20 pt-2">
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold text-white">Pages</p>
-              {["Home", "About", "Blog", "Contact"].map((item) => (
+              {["Home", "Work", "Services", "Blog", "Contact"].map((item) => (
                 <Link
                   key={item}
                   href="#"
@@ -105,7 +105,7 @@ export default function FooterSection() {
             </div>
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold text-white">Socials</p>
-              {["LinkedIn", "Youtube", "Twitter", "Facebook"].map((item) => (
+              {["LinkedIn", "X", "GitHub", "Dribbble"].map((item) => (
                 <Link
                   key={item}
                   href="#"
@@ -121,14 +121,22 @@ export default function FooterSection() {
         {/* Bottom bar */}
         <div className="flex items-center justify-between border-t border-neutral-800 px-10 py-4">
           <p className="text-xs text-neutral-500">
-            Visioned and Crafted by Kanishk Dubey
+            © 2025 Avix. All rights reserved.
           </p>
-          <Link
-            href="#"
-            className="text-xs text-neutral-500 transition-colors hover:text-white"
-          >
-            Privacy policy
-          </Link>
+          <div className="flex gap-4">
+            <Link
+              href="#"
+              className="text-xs text-neutral-500 transition-colors hover:text-white"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="#"
+              className="text-xs text-neutral-500 transition-colors hover:text-white"
+            >
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </div>

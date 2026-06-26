@@ -47,26 +47,26 @@ function TestimonialCard({ name, role, quote, image }: TestimonialCardProps) {
 
 const testimonials: TestimonialCardProps[] = [
   {
-    name: "Daniel Roy",
-    role: "Manager, BrightStack",
+    name: "Rajan Mehta",
+    role: "Founder, Cortex Labs",
     quote:
-      "They understood our workflow instantly. The AI integrations removed so much manual work and saved significant time.",
+      "Avix shipped our MVP in six weeks — a real product, not a prototype. We used it to close our seed round.",
     image:
       "https://i.pinimg.com/736x/ce/1c/b1/ce1cb1c471f0011d93dacc29ce85b37a.jpg",
   },
   {
-    name: "Sarah Chen",
-    role: "CEO, NovaPulse",
+    name: "Emma Brandt",
+    role: "CPO, Stackline",
     quote:
-      "The automation they built transformed how our team operates. We went from hours of manual data entry.",
+      "Three agencies before Avix. None delivered. They took over, cleaned the codebase, and shipped v1 in under two months.",
     image:
       "https://i.pinimg.com/1200x/3b/11/41/3b1141a3657aadacbb9c659388131123.jpg",
   },
   {
-    name: "Marcus Webb",
-    role: "CTO, Driftline",
+    name: "Theo Nakamura",
+    role: "CTO, Flowbase",
     quote:
-      "Outstanding execution from start to finish. Their AI solutions integrated seamlessly with our existing stack.",
+      "They push back when something's wrong. You want a team with opinions — not order-takers who just nod.",
     image:
       "https://i.pinimg.com/1200x/16/61/70/1661707d7524042da1b13236e832b2b7.jpg",
   },
@@ -78,10 +78,10 @@ export default function Testemonials() {
 
   return (
     <div className="flex flex-col gap-2">
-      <InfoPill title="Testimonial" />
+      <InfoPill title="Testimonials" />
       <div>
-        <MainHeading title="Clients Who've " className="text-start" />
-        <MainHeading title="Seen the Difference" className="text-start" />
+        <MainHeading title="Clients Who" className="text-start" />
+        <MainHeading title="Don't Settle" className="text-start" />
       </div>
 
       <div ref={ref} className="my-10 grid h-112.5 w-full grid-cols-3 gap-2.5">

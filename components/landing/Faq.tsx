@@ -9,29 +9,29 @@ import Glow from "../Glow";
 
 const faqs = [
   {
-    question: "How can AI automation help my business?",
+    question: "How long does a typical project take?",
     answer:
-      "AI automation streamlines repetitive tasks, reduces human error, and frees your team to focus on high-value work — resulting in faster turnaround and lower operational costs.",
+      "Most MVPs ship in 6–8 weeks from kickoff. Larger builds are scoped after a proper discovery session — you'll always have a realistic timeline before work starts, not buried in a contract after it does.",
   },
   {
-    question: "Is AI automation difficult to integrate?",
+    question: "Do you work with early-stage startups?",
     answer:
-      "Not at all. We handle the full integration process end-to-end, working with your existing tools and workflows so your team experiences minimal disruption.",
+      "Yes. We work with founders from the idea stage through Series A and beyond. We've helped close funding rounds with MVPs, rebuilt platforms mid-growth, and scaled infrastructure that was never designed to handle what it was handling.",
   },
   {
-    question: "What industries can benefit from AI automation?",
+    question: "Who owns the code when we're done?",
     answer:
-      "Virtually any industry — from e-commerce and finance to healthcare and logistics. If your business has repetitive processes or large amounts of data, AI can create value.",
+      "You do. Entirely. Full IP and full codebase ownership from day one — no license fees, no lock-in, no strings attached. We're building your product, not holding it hostage.",
   },
   {
-    question: "Do I need technical knowledge to use AI automation?",
+    question: "What tech stack do you use?",
     answer:
-      "No technical background is required. We build systems designed for non-technical users and provide full onboarding so your team can hit the ground running.",
+      "Primarily TypeScript, React, Next.js, Node.js, and PostgreSQL — modern, battle-tested, and easy to hire around when you scale your own team. If you have an existing stack or a technical requirement, we'll work within it.",
   },
   {
-    question: "What kind of support do you offer?",
+    question: "What happens after we launch?",
     answer:
-      "We offer dedicated ongoing support including monitoring, updates, and direct access to our team — so your automations keep running smoothly long after launch.",
+      "Every engagement includes post-launch support. Many clients move into our Growth Partnership after their MVP — we become the ongoing engineering team without the overhead, HR, and management cost of building one in-house.",
   },
 ];
 
@@ -98,12 +98,11 @@ export default function Faq() {
       <div className="flex h-full w-[30%] flex-col gap-2">
         <InfoPill title="FAQ" />
         <div className="flex flex-col">
-          <MainHeading title="Frequently" className="text-start" />
-          <MainHeading title="Asked Questions" className="text-start" />
+          <MainHeading title="Common" className="text-start" />
+          <MainHeading title="Questions" className="text-start" />
         </div>
         <p className="font-semibold text-neutral-600">
-          Got a specific question?{" "}
-          <span className="text-white">Contact us</span>
+          Something else? <span className="text-white">Contact us</span>
         </p>
       </div>
 

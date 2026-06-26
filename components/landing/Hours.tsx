@@ -34,12 +34,12 @@ const Hours = () => {
           paintOrder="stroke fill"
           style={{ fontFamily: "inherit" }}
         >
-          10M
+          73
         </text>
       </svg>
 
-      <h1 className="absolute z-99 mt-30 h-auto w-[780px] bg-linear-to-b from-[#ffffff] to-[#999999] bg-clip-text text-center text-[54px] leading-[1.1] font-semibold tracking-tighter whitespace-pre-wrap text-transparent">
-        We are Notch we saves team over 10 million hours every years
+      <h1 className="absolute z-99 mt-30 h-auto w-[780px] bg-linear-to-b from-[#ffffff] to-[#999999] bg-clip-text text-center text-[104px] leading-[1.1] font-semibold tracking-tighter whitespace-pre-wrap text-transparent">
+        Shipped.
       </h1>
     </div>
   );

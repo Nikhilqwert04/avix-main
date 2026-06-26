@@ -62,9 +62,9 @@ const CardContent = ({
 const Benefits = () => {
   return (
     <div className="my-10 flex h-fit flex-col gap-2 pb-20">
-      <InfoPill title="Benefits" />
+      <InfoPill title="Why Avix" />
       <MainHeading
-        title="What Makes Our AI Better for Your Business"
+        title="Built to deliver. Not to bill."
         className="max-w-lg text-start"
       />
 
@@ -76,8 +76,8 @@ const Benefits = () => {
         >
           <CardContent
             icon={<FaHourglass size={14} />}
-            title="Time saving."
-            description="Automate tasks instantly."
+            title="Ships fast."
+            description="Sprints over semesters."
           />
         </motion.div>
 
@@ -88,8 +88,8 @@ const Benefits = () => {
         >
           <CardContent
             icon={<MdFastForward size={16} />}
-            title="Faster Workflows."
-            description="Speed up your operations."
+            title="Scales cleanly."
+            description="No tech debt baked in."
           />
         </motion.div>
 
@@ -100,8 +100,8 @@ const Benefits = () => {
         >
           <CardContent
             icon={<MdMonetizationOn size={16} />}
-            title="Cost Efficient."
-            description="Reduce manual workload."
+            title="You own it."
+            description="Full IP from day one."
           />
         </motion.div>
 
@@ -146,8 +146,8 @@ const Benefits = () => {
         >
           <CardContent
             icon={<FaLightbulb size={14} />}
-            title="Better Insights."
-            description="Understand data quickly."
+            title="Performance-first."
+            description="Fast by default."
           />
         </motion.div>
 
@@ -158,8 +158,8 @@ const Benefits = () => {
         >
           <CardContent
             icon={<FaCrosshairs size={14} />}
-            title="Higher Accuracy."
-            description="Minimize human errors."
+            title="Clean handoffs."
+            description="Documented and tested."
           />
         </motion.div>
 
@@ -170,8 +170,8 @@ const Benefits = () => {
         >
           <CardContent
             icon={<FaChartBar size={14} />}
-            title="Easy Scaling."
-            description="Grow without extra effort."
+            title="Long-term partner."
+            description="We stay past launch day."
           />
         </motion.div>
       </div>

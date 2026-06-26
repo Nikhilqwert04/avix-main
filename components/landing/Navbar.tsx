@@ -4,29 +4,29 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
   SiStripe,
-  SiNotion,
-  SiLinear,
   SiVercel,
+  SiSupabase,
+  SiLinear,
   SiFigma,
-  SiOpenai,
+  SiGithub,
 } from "react-icons/si";
 
 const companies = [
   { name: "Stripe", icon: SiStripe },
-  { name: "Notion", icon: SiNotion },
-  { name: "Linear", icon: SiLinear },
   { name: "Vercel", icon: SiVercel },
+  { name: "Supabase", icon: SiSupabase },
+  { name: "Linear", icon: SiLinear },
   { name: "Figma", icon: SiFigma },
-  { name: "OpenAI", icon: SiOpenai },
+  { name: "GitHub", icon: SiGithub },
 ];
 
 const leftLinks = [
   { label: "Home", href: "/" },
-  { label: "Template", href: "#" },
+  { label: "Work", href: "#" },
 ];
 
 const rightLinks = [
-  { label: "Blog", href: "/blog" },
+  { label: "Services", href: "#" },
   { label: "Contact", href: "/contact" },
 ];
 

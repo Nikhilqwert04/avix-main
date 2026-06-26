@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 
 const leftLinks = [
   { label: "Home", href: "/" },
-  { label: "Template", href: "#" },
+  { label: "Work", href: "#" },
 ];
 
 const rightLinks = [
-  { label: "Blog", href: "/blog" },
+  { label: "Services", href: "#" },
   { label: "Contact", href: "/contact" },
 ];
 

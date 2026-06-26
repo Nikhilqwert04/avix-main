@@ -47,13 +47,13 @@ const Landing = () => {
           transition={{ duration: 0.6, ease }}
         >
           <span className="shrink-0 rounded-full bg-blue-600 px-2 py-1 text-xs font-medium text-white">
-            New
+            Accepting
           </span>
           <motion.span
             className="block overflow-hidden font-medium tracking-tighter whitespace-nowrap"
             initial={{ maxWidth: 0, opacity: 0 }}
             animate={{
-              maxWidth: 160,
+              maxWidth: 220,
               opacity: 1,
               paddingTop: 3,
               paddingBottom: 3,
@@ -62,7 +62,7 @@ const Landing = () => {
             }}
             transition={{ duration: 0.5, ease, delay: 0.7 }}
           >
-            Custom AI Agents
+            Now accepting new projects
           </motion.span>
         </motion.div>
 
@@ -73,9 +73,11 @@ const Landing = () => {
           transition={{ duration: 0.6, ease, delay: 0.15 }}
         >
           <h1 className="text-[70px] tracking-[-0.06em]">
-            We Make AI Work for You
+            Software That Ships.
           </h1>
-          <h1 className="text-[70px] tracking-[-0.06em]">Not Against You.</h1>
+          <h1 className="text-[70px] tracking-[-0.06em]">
+            Products That Scale.
+          </h1>
         </motion.div>
 
         <motion.span
@@ -84,8 +86,9 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.3 }}
         >
-          We design AI systems that save time, cut costs, and make your business
-          run smoother — without the complexity.
+          We partner with founders, startups, and growing teams to design and
+          engineer digital products — from the first line of code to production
+          scale.
         </motion.span>
 
         <motion.div
@@ -98,13 +101,13 @@ const Landing = () => {
             className="rounded-full bg-neutral-100 px-5 py-2 text-[15px] font-semibold text-neutral-950 transition-colors duration-150 ease-in hover:bg-neutral-400"
             href={"#"}
           >
-            Book a call
+            Start a project
           </Link>
           <Link
             className="rounded-full bg-neutral-800 px-4 py-2 text-[15px] font-semibold text-neutral-50 transition-colors duration-150 ease-in hover:bg-neutral-900"
             href={"#"}
           >
-            View services
+            Explore our work
           </Link>
         </motion.div>
       </div>

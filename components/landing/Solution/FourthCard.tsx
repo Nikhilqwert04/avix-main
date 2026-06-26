@@ -165,9 +165,9 @@ const FourthCard = () => (
     </div>
 
     <p className="mt-4 text-lg font-medium tracking-tighter text-neutral-400">
-      <span className="font-semibold text-white">Custom AI Agents.</span> Build
-      advanced AI systems that think and act intelligently for your business
-      needs.
+      <span className="font-semibold text-white">Internal Tools.</span> Replace
+      the spreadsheets and workarounds with software your team actually wants to
+      use.
     </p>
   </motion.div>
 );

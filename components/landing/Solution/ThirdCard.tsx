@@ -121,9 +121,9 @@ const ThirdCard = () => (
     </div>
 
     <p className="mt-2 max-w-sm px-4 text-lg font-medium tracking-tighter text-neutral-400">
-      <span className="font-semibold text-white">AI Data Analysis.</span> Turn
-      complex data into clear, simple & easy practical insights you can easily
-      act on.
+      <span className="font-semibold text-white">Mobile Applications.</span>{" "}
+      iOS, Android, or cross-platform — we pick what&apos;s right for your
+      users.
     </p>
   </motion.div>
 );

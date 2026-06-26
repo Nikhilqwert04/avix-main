@@ -20,7 +20,7 @@ export const Comparision = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <InfoPill title="Comparision" />
+        <InfoPill title="Comparison" />
       </motion.div>
 
       <motion.div
@@ -28,7 +28,7 @@ export const Comparision = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
       >
-        <MainHeading title="Traditional way vs AI powered automation" />
+        <MainHeading title="Traditional Agency vs. Working With Avix" />
       </motion.div>
 
       <motion.div
@@ -39,11 +39,11 @@ export const Comparision = () => {
       >
         <div className="flex items-center gap-2">
           <CgSandClock />
-          Traditional way
+          Traditional agency
         </div>
         <div className="flex items-center">
           <BsLightning />
-          Avixx automation
+          Working with Avix
         </div>
         <div className="absolute -top-5 left-62">
           <div className="flex size-20 items-center justify-center rounded-full bg-white p-5 text-2xl font-semibold text-black">
@@ -69,16 +69,16 @@ export const Comparision = () => {
         >
           <div className="flex h-full flex-col justify-center gap-4 rounded-2xl bg-linear-to-tr from-black via-black/80 to-neutral-700 p-8">
             {[
-              "Slow, manual processes",
-              "Prone to human errors",
-              "Requires more manpower",
-              "Hard to scale without hiring",
-              "Limited to working hours",
-              "Based on guesswork or delays",
-              "Repetitive tasks slow teams",
-              "Multi-step, manual hand-offs",
-              "Slower response times",
-              "Manual follow-ups and tracking",
+              "Weeks of discovery before any real work",
+              "Design and dev teams working in isolation",
+              "Slow feedback loops and approval chains",
+              "Vague timelines that slip every other week",
+              "Junior engineers billed at senior rates",
+              "Code that's hard to maintain past handoff",
+              "Monthly retainers with unclear deliverables",
+              "No documentation when the project ends",
+              "Scope creep with no accountability",
+              "Built for the invoice, not the product",
             ].map((item) => (
               <div
                 key={item}
@@ -99,16 +99,16 @@ export const Comparision = () => {
         >
           <div className="flex h-full flex-col justify-center gap-4 rounded-2xl bg-linear-to-tr from-black via-black/80 to-neutral-700 p-8">
             {[
-              "Tasks completed instantly",
-              "High precision, consistent results",
-              "Lower operational costs",
-              "Scales effortlessly",
-              "Works 24/7 nonstop",
-              "Real-time insights and data-driven",
-              "Automates busywork for higher output",
-              "Smooth, automatic flow",
-              "Instant replies through chat/voice agents",
-              "Automated nurturing and reminders",
+              "Scoped, kicked off, in motion within one week",
+              "Design and engineering as a single team",
+              "Weekly deliverables, always visible and on track",
+              "Clear milestones and honest timelines from day one",
+              "Senior engineers on every engagement, no exceptions",
+              "Clean, tested, documented code throughout",
+              "Measurable output you can see each sprint",
+              "Full codebase handoff — documented and ready",
+              "Scope changes handled transparently",
+              "Built to ship. Built to last.",
             ].map((item) => (
               <div
                 key={item}

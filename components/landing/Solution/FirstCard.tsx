@@ -25,7 +25,7 @@ export const AnalyzingContent = () => (
         </div>
         <div className="flex flex-1 flex-col gap-1.5">
           <span className="text-sm font-medium tracking-tight text-white">
-            Count hours work
+            Requirements scoped
           </span>
           <div className="h-[3px] w-20 rounded-full bg-neutral-600" />
         </div>
@@ -68,7 +68,7 @@ export const AnalyzingContent = () => (
         </div>
         <div className="flex flex-1 flex-col gap-1.5">
           <span className="text-sm font-medium tracking-tight text-white">
-            Add to CRM
+            Architecture defined
           </span>
           <div className="h-[3px] w-20 rounded-full bg-neutral-600" />
         </div>
@@ -116,7 +116,7 @@ export const AnalyzingContent = () => (
         </div>
         <div className="flex flex-1 flex-col gap-1.5">
           <span className="text-sm font-medium tracking-tight text-neutral-500">
-            Send invoice
+            QA & deploy
           </span>
           <div className="h-[3px] w-20 rounded-full bg-neutral-700" />
         </div>
@@ -144,9 +144,9 @@ const FirstCard = () => (
     transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94], delay: 0 }}
   >
     <p className="text-lg font-medium tracking-tighter text-neutral-400">
-      <span className="font-semibold text-white">Workflow Automation.</span>{" "}
-      Automate repetitive tasks and efficiently streamline your daily
-      operations.
+      <span className="font-semibold text-white">Custom Web Applications.</span>{" "}
+      Full-stack products engineered for real users — designed to perform, built
+      to last.
     </p>
     <Glow className="top-20 left-11" width="80%" height="20%" opacity={0.1} />
     <AnalyzingContent />

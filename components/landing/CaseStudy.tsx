@@ -8,22 +8,22 @@ const cases = [
   {
     bg: "https://i.pinimg.com/1200x/99/41/e4/9941e429916ea59b01b6c847fd755184.jpg",
     quote:
-      "Cube really helped us to automate all of our manual process and saves us at least 10 hrs per week.",
+      "Avix shipped a production-ready product in 11 weeks. That helped us close a $1.8M seed round.",
   },
   {
     bg: "https://i.pinimg.com/1200x/ee/19/a7/ee19a7292d2dcaded602969615b3ff41.jpg",
     quote:
-      "Our outreach conversion rate tripled within the first month. The AI handles every follow-up perfectly.",
+      "Our platform handled 12× normal load on Black Friday — zero downtime, $840K in revenue that day.",
   },
   {
     bg: "https://i.pinimg.com/736x/6d/30/e2/6d30e280e89480be891a16659ca1725f.jpg",
     quote:
-      "We closed 40% more deals without hiring a single SDR. This is the future of sales automation.",
+      "Six spreadsheets replaced with one internal platform in eight weeks. Our team actually uses it.",
   },
   {
     bg: "https://i.pinimg.com/736x/96/15/1f/96151f90e2fa2c8c18c0cf6689244873.jpg",
     quote:
-      "Scheduling, follow-ups, and CRM sync — all automated. My team now focuses purely on closing.",
+      "SSO, audit logs, team permissions — shipped in three sprints. It unlocked our first Fortune 500 contract.",
   },
 ];
 
@@ -164,11 +164,8 @@ const CaseStudy = () => {
         transition: "opacity 0.7s ease, transform 0.7s ease",
       }}
     >
-      <InfoPill title="Case study" />
-      <MainHeading
-        title="How Businesses Use Our AI to Scale Faster"
-        className="max-w-md"
-      />
+      <InfoPill title="Case studies" />
+      <MainHeading title="Real Products. Real Outcomes." className="max-w-md" />
 
       <div className="relative mt-10 flex h-[400px] w-full flex-col justify-end overflow-hidden rounded-2xl">
         <div

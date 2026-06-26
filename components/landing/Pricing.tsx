@@ -39,55 +39,55 @@ const cardVariants = [
 const plans = [
   {
     icon: <Star size={16} className="fill-blue-500 text-blue-500" />,
-    label: "Starter",
+    label: "MVP Sprint",
     labelColor: "text-white",
-    title: "Build & Done",
+    title: "Validate Fast",
     description:
-      "A fully built AI automation system delivered once — no recurring fees, yours to keep.",
+      "Fixed scope, fixed timeline. A working product — not a prototype — delivered in 6–8 weeks.",
     buttonStyle: "bg-neutral-800 text-white hover:bg-neutral-700",
     features: [
-      "Custom workflow automation",
-      "Chatbot integration",
-      "Data pipeline setup",
-      "Email + chat outreach",
-      "Up to 3 integrations",
-      "Handoff & documentation",
+      "Product discovery & scoping",
+      "Full UI/UX design",
+      "Frontend + backend development",
+      "Up to 3 core integrations",
+      "Deployment & infrastructure setup",
+      "30-day post-launch support",
     ],
     popular: false,
   },
   {
     icon: <Zap size={16} className="fill-green-400 text-green-400" />,
-    label: "Professional",
+    label: "Growth Partnership",
     labelColor: "text-green-400",
-    title: "Monthly Maintenance",
+    title: "Build & Ship, Ongoing",
     description:
-      "We build, monitor, and maintain your AI systems for a full month — hands-free growth.",
+      "Your technical arm — weekly sprints, direct access, measurable output every cycle.",
     buttonStyle: "bg-white text-black hover:bg-neutral-100",
     features: [
-      "Advanced automations",
-      "Custom chatbots",
-      "Deep data analytics",
-      "Multi-channel outreach",
-      "Up to 10 integrations",
-      "Priority support",
+      "Dedicated senior engineer + designer",
+      "Weekly sprint deliverables",
+      "Architecture & code review",
+      "Continuous iteration",
+      "Up to 6 active integrations",
+      "Direct Slack access to build team",
     ],
     popular: true,
   },
   {
     icon: <GiCrown size={18} className="text-amber-500" />,
-    label: "Elite",
+    label: "Dedicated Team",
     labelColor: "text-white",
-    title: "Custom Plan",
+    title: "Full Ownership",
     description:
-      "Perfect for agencies and teams needing full strategic control and ongoing partnership.",
+      "A fully embedded engineering team — strategy, architecture, and delivery end to end.",
     buttonStyle: "bg-neutral-800 text-white hover:bg-neutral-700",
     features: [
-      "Unlimited automations",
-      "Custom AI agents",
-      "Real-time analytics",
-      "Full marketing suite",
-      "Unlimited integrations",
-      "Dedicated support lead",
+      "Full-stack engineering team",
+      "Product management included",
+      "End-to-end delivery accountability",
+      "Unlimited scope & integrations",
+      "Technical advisory & architecture",
+      "Priority response & dedicated lead",
     ],
     popular: false,
   },
@@ -101,7 +101,7 @@ export default function Pricing() {
     <div className="mt-20 flex flex-col gap-2">
       <InfoPill title="Pricing" />
       <MainHeading
-        title="Flexible Pricing for Every Business"
+        title="Clear Engagements. No Surprises."
         className="text-start"
       />
 
@@ -135,7 +135,7 @@ export default function Pricing() {
               <button
                 className={`w-full cursor-pointer rounded-full py-3 text-sm font-medium transition-colors ${plan.buttonStyle}`}
               >
-                Schedule a call
+                Start a project
               </button>
             </div>
             <div className="mt-6 flex flex-col gap-2">

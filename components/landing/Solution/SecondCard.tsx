@@ -58,8 +58,9 @@ const SecondCard = () => (
       </div>
     </div>
     <p className="mt-5 text-lg font-medium tracking-tighter text-neutral-400">
-      <span className="font-semibold text-white">Voice Agents.</span> Let AI
-      handle calls, inquiries, and follow-ups naturally and reliably every day.
+      <span className="font-semibold text-white">SaaS Development.</span> Auth,
+      billing, multi-tenancy, dashboards — we&apos;ve built these before and
+      know what breaks.
     </p>
   </motion.div>
 );

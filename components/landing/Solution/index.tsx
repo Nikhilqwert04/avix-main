@@ -11,8 +11,8 @@ import MainHeading from "@/components/ui/MainHeading";
 const Solution = () => {
   return (
     <div className="flex h-fit flex-col items-center gap-2 pb-20">
-      <InfoPill title="Our solutions" />
-      <MainHeading title="AI Solutions That Help You Work Faster and Smarter" />
+      <InfoPill title="Services" />
+      <MainHeading title="What We Build" />
 
       <div className="mt-8 grid h-screen w-full grid-cols-3 grid-rows-5 gap-5">
         <FirstCard />
