@@ -57,7 +57,7 @@ export const Comparision = () => {
         animate={inView ? { opacity: 1, scaleY: 1 } : {}}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.35 }}
         style={{ originY: 0 }}
-        className="absolute top-61 -z-9 h-[72%] w-0.5 bg-neutral-800"
+        className="absolute top-61 -z-9 h-[72%] w-0.5 bg-gradient-to-b from-white/40 via-neutral-600/30 to-transparent"
       />
 
       <div className="mt-5 grid h-102.5 w-[80%] grid-cols-2 gap-10">
@@ -65,56 +65,60 @@ export const Comparision = () => {
           initial={{ opacity: 0, x: -64 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.55, ease: "easeOut", delay: 0.3 }}
-          className="flex flex-col justify-center gap-4 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 p-8"
+          className="rounded-2xl bg-gradient-to-bl from-white/30 via-white/5 to-transparent p-[1px]"
         >
-          {[
-            "Slow, manual processes",
-            "Prone to human errors",
-            "Requires more manpower",
-            "Hard to scale without hiring",
-            "Limited to working hours",
-            "Based on guesswork or delays",
-            "Repetitive tasks slow teams",
-            "Multi-step, manual hand-offs",
-            "Slower response times",
-            "Manual follow-ups and tracking",
-          ].map((item) => (
-            <div
-              key={item}
-              className="flex items-center gap-3 text-sm text-neutral-300"
-            >
-              <span className="size-1.5 shrink-0 rounded-full bg-neutral-500" />
-              {item}
-            </div>
-          ))}
+          <div className="flex h-full flex-col justify-center gap-4 rounded-2xl bg-linear-to-tr from-black via-black/80 to-neutral-700 p-8">
+            {[
+              "Slow, manual processes",
+              "Prone to human errors",
+              "Requires more manpower",
+              "Hard to scale without hiring",
+              "Limited to working hours",
+              "Based on guesswork or delays",
+              "Repetitive tasks slow teams",
+              "Multi-step, manual hand-offs",
+              "Slower response times",
+              "Manual follow-ups and tracking",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 text-sm text-neutral-300"
+              >
+                <span className="size-1.5 shrink-0 rounded-full bg-neutral-500" />
+                {item}
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 64 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.55, ease: "easeOut", delay: 0.3 }}
-          className="flex flex-col justify-center gap-4 rounded-2xl border border-neutral-900 bg-linear-to-tr from-black via-black/80 to-neutral-700 p-8"
+          className="rounded-2xl bg-gradient-to-br from-white/30 via-white/5 to-transparent p-[1px]"
         >
-          {[
-            "Tasks completed instantly",
-            "High precision, consistent results",
-            "Lower operational costs",
-            "Scales effortlessly",
-            "Works 24/7 nonstop",
-            "Real-time insights and data-driven",
-            "Automates busywork for higher output",
-            "Smooth, automatic flow",
-            "Instant replies through chat/voice agents",
-            "Automated nurturing and reminders",
-          ].map((item) => (
-            <div
-              key={item}
-              className="flex items-center gap-3 text-sm text-neutral-300"
-            >
-              <span className="size-1.5 shrink-0 rounded-full bg-green-400" />
-              {item}
-            </div>
-          ))}
+          <div className="flex h-full flex-col justify-center gap-4 rounded-2xl bg-linear-to-tr from-black via-black/80 to-neutral-700 p-8">
+            {[
+              "Tasks completed instantly",
+              "High precision, consistent results",
+              "Lower operational costs",
+              "Scales effortlessly",
+              "Works 24/7 nonstop",
+              "Real-time insights and data-driven",
+              "Automates busywork for higher output",
+              "Smooth, automatic flow",
+              "Instant replies through chat/voice agents",
+              "Automated nurturing and reminders",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 text-sm text-neutral-300"
+              >
+                <span className="size-1.5 shrink-0 rounded-full bg-green-400" />
+                {item}
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </div>
