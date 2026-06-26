@@ -1,6 +1,7 @@
 import Benefits from "@/components/landing/Benefits/Benefits";
 import CaseStudy from "@/components/landing/CaseStudy";
 import { Comparision } from "@/components/landing/Comparision";
+import Faq from "@/components/landing/Faq";
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
 import Navbar, { Footer } from "@/components/landing/Navbar";
@@ -30,6 +31,7 @@ const page = () => {
         <Testemonials />
         <Pricing />
         <Comparision />
+        <Faq />
       </div>
       <div className="flex h-screen w-screen items-center justify-center text-6xl">
         Working...
