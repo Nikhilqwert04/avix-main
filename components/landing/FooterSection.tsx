@@ -35,7 +35,7 @@ const LogoPill = () => (
           />
         </g>
       </svg>
-      <span className="pt-2 text-sm font-semibold text-white">Avix</span>
+      <span className="pt-2 text-sm font-semibold text-white">Avixx</span>
     </div>
 
     <div className="absolute top-0 -left-4 rotate-180">
@@ -121,7 +121,7 @@ export default function FooterSection() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center gap-3 border-t border-neutral-800 px-6 py-4 text-center md:flex-row md:justify-between md:gap-0 md:px-10 md:text-left">
           <p className="text-xs text-neutral-500">
-            © 2025 Avix. All rights reserved.
+            © 2025 Avixx. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link

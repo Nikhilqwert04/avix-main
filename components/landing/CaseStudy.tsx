@@ -8,7 +8,7 @@ const cases = [
   {
     bg: "https://i.pinimg.com/1200x/99/41/e4/9941e429916ea59b01b6c847fd755184.jpg",
     quote:
-      "Avix shipped a production-ready product in 11 weeks. That helped us close a $1.8M seed round.",
+      "Avixx shipped a production-ready product in 11 weeks. That helped us close a $1.8M seed round.",
   },
   {
     bg: "https://i.pinimg.com/1200x/ee/19/a7/ee19a7292d2dcaded602969615b3ff41.jpg",

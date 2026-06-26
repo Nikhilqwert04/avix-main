@@ -6,7 +6,7 @@ import Blogs from "@/components/blog/Blogs";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights on product engineering, shipping MVPs, and scaling startups — practical writing from the Avix team.",
+    "Insights on product engineering, shipping MVPs, and scaling startups — practical writing from the Avixx team.",
   alternates: { canonical: "/blogs" },
 };
 

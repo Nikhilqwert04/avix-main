@@ -50,7 +50,7 @@ const testimonials: TestimonialCardProps[] = [
     name: "Rajan Mehta",
     role: "Founder, Cortex Labs",
     quote:
-      "Avix shipped our MVP in six weeks — a real product, not a prototype. We used it to close our seed round.",
+      "Avixx shipped our MVP in six weeks — a real product, not a prototype. We used it to close our seed round.",
     image:
       "https://images.unsplash.com/photo-1629425733761-caae3b5f2e50?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -58,7 +58,7 @@ const testimonials: TestimonialCardProps[] = [
     name: "Emma Brandt",
     role: "CPO, Stackline",
     quote:
-      "Three agencies before Avix. None delivered. They took over, cleaned the codebase, and shipped v1 in under two months.",
+      "Three agencies before Avixx. None delivered. They took over, cleaned the codebase, and shipped v1 in under two months.",
     image:
       "https://plus.unsplash.com/premium_photo-1677368597077-009727e906db?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },

@@ -106,16 +106,16 @@ const interDisplay = Inter({
 //   variable: "--font-inter-display",
 // });
 
-const siteUrl = "https://avix.com";
-const siteName = "Avix";
+const siteUrl = "https://avixx.com";
+const siteName = "Avixx";
 const siteDescription =
-  "Avix is a product engineering studio that ships MVPs in 6–8 weeks. Senior engineers, full code ownership, no lock-in — built to ship, not to bill.";
+  "Avixx is a product engineering studio that ships MVPs in 6–8 weeks. Senior engineers, full code ownership, no lock-in — built to ship, not to bill.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Avix — Product Engineering, Done Right",
-    template: "%s | Avix",
+    default: "Avixx — Product Engineering, Done Right",
+    template: "%s | Avixx",
   },
   description: siteDescription,
   keywords: [
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
     "React development",
     "web app development",
     "dedicated development team",
-    "Avix",
+    "Avixx",
   ],
   applicationName: siteName,
   authors: [{ name: siteName, url: siteUrl }],
@@ -140,15 +140,15 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName,
-    title: "Avix — Product Engineering, Done Right",
+    title: "Avixx — Product Engineering, Done Right",
     description: siteDescription,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avix — Product Engineering, Done Right",
+    title: "Avixx — Product Engineering, Done Right",
     description: siteDescription,
-    creator: "@avix",
+    creator: "@avixx",
   },
   robots: {
     index: true,

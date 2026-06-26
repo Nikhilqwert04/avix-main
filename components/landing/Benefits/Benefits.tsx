@@ -62,7 +62,7 @@ const CardContent = ({
 const Benefits = () => {
   return (
     <div className="my-10 flex h-fit flex-col gap-2 pb-20">
-      <InfoPill title="Why Avix" />
+      <InfoPill title="Why Avixx" />
       <MainHeading
         title="Built to deliver. Not to bill."
         className="max-w-lg text-start"

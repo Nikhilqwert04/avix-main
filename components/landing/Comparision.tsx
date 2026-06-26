@@ -28,7 +28,7 @@ export const Comparision = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
       >
-        <MainHeading title="Traditional Agency vs. Working With Avix" />
+        <MainHeading title="Traditional Agency vs. Working With Avixx" />
       </motion.div>
 
       <motion.div
@@ -43,7 +43,7 @@ export const Comparision = () => {
         </div>
         <div className="flex items-center">
           <BsLightning />
-          Working with Avix
+          Working with Avixx
         </div>
         <div className="absolute -top-5 left-62 hidden md:block">
           <div className="flex size-20 items-center justify-center rounded-full bg-white p-5 text-2xl font-semibold text-black">

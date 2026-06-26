@@ -5,7 +5,7 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Have a product to build? Get in touch with Avix to scope your project, kick off in a week, and start shipping with a senior engineering team.",
+    "Have a product to build? Get in touch with Avixx to scope your project, kick off in a week, and start shipping with a senior engineering team.",
   alternates: { canonical: "/contact" },
 };
 

@@ -69,7 +69,7 @@ export const Contact = () => {
             />
           </svg>
           <span className="text-[18px] font-semibold tracking-tight text-white">
-            Avix
+            Avixx
           </span>
         </motion.div>
 
