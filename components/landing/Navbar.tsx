@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
   SiStripe,
@@ -23,7 +22,7 @@ const companies = [
 
 const leftLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#" },
+  { label: "Template", href: "#" },
 ];
 
 const rightLinks = [
@@ -31,11 +30,8 @@ const rightLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const ease = [0, 0, 0.2, 1] as const;
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -49,12 +45,8 @@ const Navbar = () => {
         scrolled ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <div
-        className="relative cursor-pointer"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {/* Expanding shape */}
+      <div className="relative">
+        {/* Shape */}
         <div className="flex items-start">
           {/* Left Curve */}
           <svg
@@ -68,12 +60,8 @@ const Navbar = () => {
             <path d="M 0 0 C 45.98 0 37 50 87 50 L 87 0 Z" fill="black" />
           </svg>
 
-          {/* Center — collapses to logo width, expands on hover */}
-          <motion.div
-            className="h-[50px] shrink-0 bg-black"
-            animate={{ width: hovered ? 420 : 66 }}
-            transition={{ duration: 0.32, ease }}
-          />
+          {/* Center */}
+          <div className="h-[50px] w-[420px] shrink-0 bg-black" />
 
           {/* Right Curve */}
           <svg
@@ -88,7 +76,7 @@ const Navbar = () => {
           </svg>
         </div>
 
-        {/* Logo — always visible, pinned to center */}
+        {/* Logo — pinned to center */}
         <div className="pointer-events-none absolute top-0 left-1/2 flex h-[50px] -translate-x-1/2 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -110,77 +98,30 @@ const Navbar = () => {
           </svg>
         </div>
 
-        {/* Links — 3D fold-in from top edge */}
-        <div
-          className="absolute inset-0 flex h-[50px] items-center justify-center gap-8 px-10"
-          style={{ perspective: "400px" }}
-        >
-          <AnimatePresence>
-            {hovered &&
-              leftLinks.map((link, i) => (
-                <motion.div
-                  key={link.label}
-                  initial={{ opacity: 0, rotateX: -90, y: -6 }}
-                  animate={{ opacity: 1, rotateX: 0, y: 0 }}
-                  exit={{
-                    opacity: 0,
-                    rotateX: -70,
-                    y: -4,
-                    transition: { duration: 0.12 },
-                  }}
-                  transition={{ duration: 0.24, delay: i * 0.07 + 0.14, ease }}
-                  style={{
-                    transformOrigin: "50% 0%",
-                    transformStyle: "preserve-3d",
-                  }}
-                >
-                  <Link
-                    href={link.href}
-                    className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
-                  >
-                    {link.label}
-                    <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover/link:w-full" />
-                  </Link>
-                </motion.div>
-              ))}
-          </AnimatePresence>
+        {/* Links — always visible */}
+        <div className="absolute inset-0 flex h-[50px] items-center justify-center gap-8 px-10">
+          {leftLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
 
           {/* Spacer keeps links symmetric around logo */}
           <div className="w-[22px] shrink-0" />
 
-          <AnimatePresence>
-            {hovered &&
-              rightLinks.map((link, i) => (
-                <motion.div
-                  key={link.label}
-                  initial={{ opacity: 0, rotateX: -90, y: -6 }}
-                  animate={{ opacity: 1, rotateX: 0, y: 0 }}
-                  exit={{
-                    opacity: 0,
-                    rotateX: -70,
-                    y: -4,
-                    transition: { duration: 0.12 },
-                  }}
-                  transition={{
-                    duration: 0.24,
-                    delay: (i + 2) * 0.07 + 0.14,
-                    ease,
-                  }}
-                  style={{
-                    transformOrigin: "50% 0%",
-                    transformStyle: "preserve-3d",
-                  }}
-                >
-                  <Link
-                    href={link.href}
-                    className="group/link relative text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
-                  >
-                    {link.label}
-                    <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-white transition-all duration-300 group-hover/link:w-full" />
-                  </Link>
-                </motion.div>
-              ))}
-          </AnimatePresence>
+          {rightLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-sm font-medium text-white/80 transition-colors duration-200 hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </div>

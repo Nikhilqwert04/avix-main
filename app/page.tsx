@@ -3,6 +3,7 @@ import CaseStudy from "@/components/landing/CaseStudy";
 import { Comparision } from "@/components/landing/Comparision";
 import { Contact } from "@/components/landing/Contact";
 import Faq from "@/components/landing/Faq";
+import FooterSection from "@/components/landing/FooterSection";
 import Hours from "@/components/landing/Hours";
 import Landing from "@/components/landing/Landing";
 import Navbar, { Footer } from "@/components/landing/Navbar";
@@ -37,6 +38,7 @@ const page = () => {
         <Faq />
       </div>
       <Contact />
+      <div className="mx-auto w-full max-w-6xl px-0"></div>
     </div>
   );
 };

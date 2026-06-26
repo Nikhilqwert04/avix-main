@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/landing/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Inter } from "next/font/google";
+import FooterSection from "@/components/landing/FooterSection";
 
 const interDisplay = Inter({
   subsets: ["latin"],
@@ -124,6 +125,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Navbar />
           {children}
+          <FooterSection />
         </SmoothScroll>
       </body>
     </html>

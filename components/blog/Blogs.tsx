@@ -33,11 +33,11 @@ const blogsData = [
 
 const Blogs = () => {
   return (
-    <div className="mx-auto grid h-fit w-full max-w-7xl grid-cols-1 gap-8 px-8 md:grid-cols-2">
+    <div className="mx-auto grid h-fit w-full max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2">
       {blogsData.map((blog, index) => (
         <div
           key={index}
-          className="group relative h-[450px] cursor-pointer overflow-hidden rounded-[32px]"
+          className="group relative h-[320px] cursor-pointer overflow-hidden rounded-2xl"
         >
           <img
             src={blog.image}
@@ -45,8 +45,8 @@ const Blogs = () => {
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
-          <div className="absolute top-0 left-0 z-10 rounded-br-[24px] bg-black px-6 pt-5 pb-3 transition-colors duration-500">
-            <span className="text-sm font-medium text-white">
+          <div className="absolute top-0 left-0 z-10 rounded-br-[20px] bg-black px-4 pt-4 pb-2.5 transition-colors duration-500">
+            <span className="text-xs font-medium text-white">
               {blog.category}
             </span>
 
@@ -56,11 +56,11 @@ const Blogs = () => {
 
           <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end p-8">
-            <span className="mb-3 text-sm font-medium text-gray-300">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end p-5">
+            <span className="mb-1.5 text-xs font-medium text-gray-300">
               {blog.date}
             </span>
-            <h3 className="text-2xl leading-tight font-semibold text-white md:text-[28px]">
+            <h3 className="text-base leading-snug font-semibold text-white md:text-lg">
               {blog.title}
             </h3>
           </div>

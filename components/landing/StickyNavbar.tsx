@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const leftLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#" },
+  { label: "Template", href: "#" },
 ];
 
 const rightLinks = [
